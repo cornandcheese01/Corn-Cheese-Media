@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/* Brand tokens                                                        */
+/* ------------------------------------------------------------------ */
+
+:root {
+  --ink: #0a0a0a;
+  --brand: #1677ff;
+  --brand-soft: #eaf2ff;
+  --offwhite: #f7f8fa;
+  --grey: #5f6368;
+  --line: #e5e7eb;
+
+  /* One easing curve for the entire site. */
+  --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --gutter: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --gutter: 4rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white font-body text-ink;
+    font-feature-settings: "kern" 1;
+  }
+
+  ::selection {
+    background: var(--brand);
+    color: #fff;
+  }
+
+  /* The custom cursor replaces the native one on precise pointers only. */
+  @media (pointer: fine) {
+    html.has-custom-cursor,
+    html.has-custom-cursor * {
+      cursor: none !important;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Layout + type primitives                                            */
+/* ------------------------------------------------------------------ */
+
+@layer components {
+  .shell {
+    width: 100%;
+    max-width: theme("maxWidth.editorial");
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  /* Oversized editorial headline — the site's primary voice. Sized so the
+     longest approved headline still sets on one line per break in a 7-column
+     measure at desktop. */
+  .display {
+    @apply font-display font-bold tracking-tightest;
+    font-size: clamp(2.5rem, 6.3vw, 7.5rem);
+    line-height: 0.94;
+  }
+
+  .display-sm {
+    @apply font-display font-bold tracking-tightest;
+    font-size: clamp(2rem, 4.6vw, 4.25rem);
+    line-height: 1;
+  }
+
+  .kicker {
+    @apply font-display text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-grey;
+  }
+
+  .lede {
+    @apply font-body text-grey;
+    font-size: clamp(1.0625rem, 1.35vw, 1.375rem);
+    line-height: 1.65;
+  }
+
+  .rule {
+    @apply h-px w-full bg-line;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Motion primitives                                                   */
+/* ------------------------------------------------------------------ */
+
+/* The header steps aside while the opening quote holds the screen. */
+[data-site-header] {
+  transition: opacity 700ms var(--ease-brand);
+}
+
+html[data-opening="1"] [data-site-header] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Masked line reveal — the site's signature text entrance. */
+.line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

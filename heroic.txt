@@ -1,0 +1,1246 @@
+Absolutely. Send me the hero/landing-page description or your existing prompt.
+
+I’ll keep the same overall layout, structure, animations, and visual direction you specify, but I’ll modify the actual website content/copy according to your content website.
+
+I can specifically handle:
+
+Hero headline + subheadline
+CTA buttons
+Navigation/menu text
+Section headings and descriptions
+Feature/service cards
+Stats and trust elements
+Scroll-based sections
+Testimonials/social proof
+Footer content
+Microcopy and labels
+Any half-tone/halftone elements or text you mentioned
+Making the copy feel like a real premium content/creative website, rather than generic AI-generated filler
+
+Send the prompt/description, and I’ll rewrite it into a clean, detailed implementation prompt you can directly give to Gemini/Antigravity.
+
+I don't know how to make this website in a single go. I want to make this website as parts by parts, okay? So you don't have to make it in a single go, okay? Just do what I say.
+
+Got it. We’ll build the website part by part, not as one huge prompt.
+
+You give me one section/component at a time, and I’ll only work on that part. I won’t jump ahead or add sections you haven’t asked for.
+
+For each part, I can help you define:
+
+Content/copy
+Layout & structure
+Visual design
+Animations/interactions
+Exact implementation prompt for Gemini/Antigravity
+
+Send me the first part whenever you're ready.
+
+Pasted text(3).txt
+Document
+
+Yes. I’ve got this part.
+
+The uploaded content is the Halftone Flow React component. It is a reusable HalftoneFlow component built for a React + TypeScript + Tailwind + shadcn-style project, using an animated WebGL halftone background and GSAP reveal animation.
+
+For our part-by-part approach, I’ll treat this as one visual component only, not the entire website.
+
+Part 1 — Halftone Flow
+
+We should integrate this component first and not modify the rest of the landing page yet.
+
+The component currently contains:
+
+Animated WebGL halftone background
+Black/red/orange flowing visual
+Full-screen responsive canvas
+Structural background lines
+nexus flow placeholder branding/content
+Email/waitlist input
+Early-adopter social proof
+Footer
+GSAP text-reveal animation
+
+Important: Since your actual website content is different, we will replace the Nexus/Flow content later with your actual content. We don't need to blindly keep the demo text.
+
+For now, don't change the visual component itself unless you tell me to.
+
+Send me the next part/description, and I'll work only on that part.
+
+give me upated prompt since im using claude code for the making website
+
+Yes. Since you're using Claude Code, the prompt should be written as an implementation instruction for an existing codebase, rather than the shadcn “copy this component” format from the original file.
+
+For this first part only — the Halftone Flow visual/background component — give Claude Code this:
+
+TASK — Integrate the Halftone Flow Visual Component
+
+You are working inside my existing website codebase.
+
+I am building the website part by part, so for this task you must ONLY implement the Halftone Flow visual/background component. Do NOT build or redesign other website sections, pages, footer content, navigation, or additional components unless they are strictly required for this component to work.
+
+1. First inspect the existing project
+
+Before changing anything:
+
+Inspect the existing project structure.
+Identify whether the project uses React/Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
+Identify the existing component conventions and styling conventions.
+Reuse the existing setup wherever possible.
+Do NOT unnecessarily recreate the project or install duplicate dependencies.
+Do NOT overwrite existing components or configuration files without checking them first.
+2. Create the Halftone Flow component
+
+Create a reusable component at the project's appropriate UI component location, preferably:
+
+components/ui/halftone-flow.tsx
+
+If the project uses a different established component directory, follow the existing project convention.
+
+The component should reproduce the visual behavior of the provided Halftone Flow reference:
+
+Full-width responsive animated background
+WebGL canvas
+Fluid/organic flowing motion
+Halftone/dot-based rendering
+Dark/black base
+Red/orange luminous flowing areas
+Subtle animated movement
+Smooth rendering
+No visible scrollbars inside the component
+The animation should continuously run using requestAnimationFrame
+Canvas should automatically resize with the viewport/container
+The component must remain responsive on desktop, tablet, and mobile.
+3. Preserve the visual concept
+
+The important visual idea is:
+
+A dark cinematic background made from animated halftone dots that form flowing red/orange organic waves.
+
+Do NOT replace this with:
+
+3D objects
+floating spheres
+generic particles
+blobs
+glassmorphism
+gradients-only backgrounds
+stock images
+random AI-generated decorative elements.
+
+The halftone effect itself is important.
+
+4. Component API
+
+Make the component reusable and configurable.
+
+Support props similar to:
+
+type HalftoneFlowProps = {
+  mode?: "dark" | "light";
+  hue?: number;
+  saturation?: number;
+  brightness?: number;
+  className?: string;
+  style?: React.CSSProperties;
+};
+
+Use sensible defaults matching the original visual:
+
+mode: "dark"
+hue: 0
+saturation: 1
+brightness: 1
+
+Clamp values where appropriate so invalid values cannot break the visual.
+
+5. WebGL implementation
+
+Use a WebGL canvas for the animated halftone effect.
+
+The shader should:
+
+Calculate normalized UV coordinates.
+Create an organic flowing field.
+Animate the field over time.
+Distort/rotate the field to create fluid motion.
+Convert the resulting intensity into a halftone dot pattern.
+Vary dot radius according to the underlying flow intensity.
+Produce dark red → red → warm orange highlights.
+Keep the overall background predominantly black.
+
+The animation should feel premium, restrained, cinematic and intentional, not like a generic particle animation.
+
+6. Performance
+
+Make the implementation production-conscious:
+
+Handle WebGL unsupported environments gracefully.
+Clean up animation/event listeners when the component unmounts.
+Avoid unnecessary React re-renders.
+Resize the canvas correctly.
+Account for device pixel ratio without creating excessive GPU load.
+Avoid memory leaks.
+Do not continuously update React state for animation.
+Keep the animation entirely inside the canvas/WebGL layer where possible.
+7. Layering
+
+The component must work as a background layer behind future landing-page content.
+
+It should support usage like:
+
+<section className="relative overflow-hidden">
+  <HalftoneFlow className="absolute inset-0 h-full w-full" />
+
+  <div className="relative z-10">
+    {/* Future website content */}
+  </div>
+</section>
+
+Therefore:
+
+Canvas must not block clicks.
+Set appropriate pointer-events.
+Content placed above it must remain fully interactive.
+Do not force the component to occupy the entire browser viewport unless its parent gives it that height.
+The parent should control the component's dimensions.
+8. Important — do NOT include demo website content
+
+The original reference component contains placeholder content such as:
+
+Nexus
+Nexus Flow
+Join the waitlist
+Early adopters
+Product / Company / Resources
+Nexus footer
+
+DO NOT implement those as part of this task.
+
+Those are from the original demo and are NOT the content of my website.
+
+For this task, implement only the Halftone Flow visual component.
+
+9. Do not add unnecessary dependencies
+
+Before installing anything, check whether the existing project already has what is required.
+
+Prefer:
+
+React
+TypeScript
+existing Tailwind setup
+
+The WebGL effect should use the browser's native WebGL API.
+
+Do NOT add Three.js, React Three Fiber, or another 3D framework just to recreate this effect.
+
+Do NOT add GSAP for this component unless it is genuinely required. The primary animation is the WebGL animation itself.
+
+10. Accessibility
+
+Because this is a decorative visual:
+
+Mark it as decorative where appropriate.
+It must not interfere with screen readers.
+It must not receive keyboard focus.
+It must not interfere with user interaction.
+Respect prefers-reduced-motion where practical. When reduced motion is enabled, significantly reduce or disable continuous animation while preserving the visual background.
+11. Integration
+
+After creating the component:
+
+Integrate it into a minimal test/demo location in the existing application only if necessary to verify it.
+Do not redesign the existing website around it.
+Do not create the rest of the landing page.
+Do not add placeholder sections.
+Do not change unrelated files.
+12. Verify
+
+After implementation:
+
+Run the project's existing type-check/lint/build commands where available.
+Fix TypeScript errors.
+Fix runtime errors.
+Verify that the WebGL canvas renders.
+Verify that resizing works.
+Verify that the component does not block pointer interaction.
+Verify that it works on mobile dimensions.
+Verify that unmounting does not leave animation loops or event listeners running.
+FINAL RULE
+
+Work ONLY on this Halftone Flow component in this task.
+
+Do not make creative assumptions about the rest of my website.
+
+I will provide the next website section separately, and we will build the website incrementally, one part at a time.
+
+This version is much better suited to Claude Code because it tells it to inspect → implement → verify, rather than assuming it's starting from a blank shadcn project. The original component specification explicitly targets /components/ui and Tailwind/TypeScript/shadcn conventions.
+
+When you give me the next part, I'll keep the same approach and create only the prompt for that specific section.
+
+Yes — this is the right way to approach the Corn & Cheese website. Instead of asking Webfirst Dev for a whole website, we should build a component shopping list / component map first, then pick the best component for each section.
+
+For Corn & Cheese, I would not use every fancy component available. The site needs to feel like a premium creative advertising agency, with strong editorial composition, typography, campaign visuals and motion — not like a SaaS template.
+
+7
+What we need from Corn & Cheese
+
+Based on the Corn & Cheese direction we've already established, here's the component structure I'd target.
+
+#	Website section	Webfirst component category	What we need
+1	Hero	Background / Shader / Text	Halftone Flow + huge typography + minimal intro
+2	Brand statement	Text / Typography	“People change how they shop.”
+3	AI ecosystem	Marketing Block / Visual	“The Ecosystem of AI-Powered Advertising”
+4	Services	Marketing Blocks / Cards	Meta Ads, Google Ads, Influencer Marketing, Social Media Optimisation
+5	Universe / capabilities	Interactive / Scroll	Explore the different capabilities
+6	Selected work	Gallery / Images / Cards	Campaigns, brands, creative work
+7	Brand showcase	Logo wall / Marquee	Brinton, Purplle + other brands
+8	AI-first section	Shader / Interactive / Text	AI-FIRST marketing systems
+9	Numbers / impact	Stats / Typography	20+ brands, 200M+ impressions, ₹1Cr+ ad spend
+10	Pan India / reach	Map / Visual / Interactive	Pan India presence
+11	Contact CTA	CTA / Form	“Great Brands Don't Happen by Chance.”
+12	Footer	Footer / Navigation	Contact + social + agency information
+1. HERO — Most important
+
+This is where the Halftone Flow component you just gave me comes in.
+
+Webfirst categories to search:
+
+Backgrounds → Shader → WebGL → Halftone → Animated Background → Text Reveal
+
+We want:
+
+Visual
+
+Halftone Flow
+
+Typography
+
+People change how they shop.
+
+or the approved hero structure/content from your Corn & Cheese content.
+
+CTA
+
+Explore the Universe
+
+The hero should be very minimal.
+
+Don't select:
+
+3D objects
+floating UI
+excessive glassmorphism
+animated blobs
+SaaS dashboard-style hero
+random gradient backgrounds
+2. BRAND STATEMENT
+
+This should be a typography-first section, not a card section.
+
+Search Webfirst for:
+
+Text → Big Text → Text Reveal → Scroll Typography → Kinetic Typography
+
+The section can essentially be a huge statement:
+
+People change how they shop.
+
+Then supporting Corn & Cheese messaging underneath.
+
+This is where we can use scroll-based typography animation.
+
+3. AI ECOSYSTEM
+
+This is a major storytelling section.
+
+Search:
+
+Marketing Blocks → Feature Sections → Bento → Interactive Cards → Scroll Sections
+
+Content:
+
+The Ecosystem of AI-Powered Advertising
+
+Then explain the relationship between:
+
+AI → Consumer Intelligence → Creative → Media → Performance
+
+But I would not automatically use a normal 4-card grid.
+
+A more editorial/interactive component would fit Corn & Cheese much better.
+
+4. SERVICES
+
+We need a component capable of displaying the four core services:
+
+Meta Ads
+Google Ads
+Influencer Marketing
+Social Media Optimisation
+
+Search:
+
+Marketing Blocks → Services → Interactive Cards → Hover Cards → Accordion → Sticky Cards
+
+I'd particularly look for a large interactive service list rather than four tiny cards.
+
+For example:
+
+01  META ADS
+02  GOOGLE ADS
+03  INFLUENCER MARKETING
+04  SOCIAL MEDIA OPTIMISATION
+
+Hovering/clicking could change the accompanying image/video.
+
+That would feel much more like an advertising agency.
+
+5. "EXPLORE THE UNIVERSE"
+
+Since “Explore the Universe” is one of the important CTA concepts, we need an interactive transition here.
+
+Search:
+
+Scroll → Horizontal Scroll → Sticky Section → Parallax → Image Reveal → Text Reveal
+
+This can become the transition between capabilities and work.
+
+6. SELECTED WORK
+
+This is very important for an agency website.
+
+Search:
+
+Marketing Blocks → Portfolio → Case Studies → Image Gallery → Masonry → Horizontal Gallery → Project Cards
+
+But don't choose a generic portfolio grid.
+
+I'd prefer something like:
+
+PROJECT 01
+Large campaign image/video
+
+PROJECT 02
+Large campaign image/video
+
+PROJECT 03
+Large campaign image/video
+
+with large typography and scroll transitions.
+
+This is where real campaign imagery/video should dominate.
+
+7. BRAND SHOWCASE
+
+We need to establish credibility with brands such as:
+
+Brinton
+Purplle
+
+Search:
+
+Logo Cloud → Marquee → Logo Wall → Brand Showcase
+
+A subtle animated logo marquee would work.
+
+Don't make this a giant “Trusted by 50+ companies” SaaS section.
+
+Keep it editorial.
+
+8. AI-FIRST MARKETING SYSTEMS
+
+This deserves its own visual treatment because AI-FIRST marketing systems is a core positioning point.
+
+Search:
+
+Shader → Interactive Background → Data Visualization → Network → Grid → Animated Lines
+
+But don't turn it into a fake technical dashboard.
+
+Think:
+
+intelligence → data → consumer behaviour → creative → advertising
+
+with typography and motion.
+
+9. IMPACT / NUMBERS
+
+We already have strong numbers:
+
+20+
+Brands trusted
+
+200M+
+Campaign impressions
+
+₹1Cr+
+Ad spend managed
+
+AI-FIRST
+Marketing systems
+
+Search:
+
+Stats → Number Counter → Big Numbers → Scroll Counter → Typography
+
+I'd choose a huge-number typography component, not four standard statistic cards.
+
+Example:
+
+20+
+BRANDS TRUSTED
+
+200M+
+CAMPAIGN IMPRESSIONS
+
+₹1Cr+
+AD SPEND MANAGED
+
+AI-FIRST
+MARKETING SYSTEMS
+
+Numbers should animate as you scroll.
+
+10. PAN INDIA
+
+For this, search:
+
+Map → India Map → Interactive Map → Geographic → Animated Map
+
+We can have:
+
+Built for India. Designed to scale.
+
+or whatever exact copy is in your official Corn & Cheese content.
+
+The visual should communicate Pan India, rather than simply putting an India map for decoration.
+
+11. CONTACT
+
+This needs to be a major closing moment, not a tiny contact form.
+
+Your existing direction:
+
+Great Brands Don't Happen by Chance.
+
+CTA:
+
+Drop a Message
+
+Search:
+
+CTA → Contact → Form → Magnetic Button → Text Reveal
+
+I'd use a very large closing CTA with the form appearing as the user interacts.
+
+Email:
+
+hello@cornandcheese.com
+
+12. FOOTER
+
+Search:
+
+Footer → Minimal Footer → Agency Footer → Mega Footer
+
+Keep it simple.
+
+We don't need a huge SaaS footer.
+
+⭐ The Webfirst categories I want you to focus on
+
+When you're browsing Webfirst Dev, prioritize these:
+
+MUST HAVE
+
+1. Backgrounds
+
+Halftone
+Shader
+WebGL
+Animated backgrounds
+
+2. Typography
+
+Text reveal
+Kinetic typography
+Scroll text
+Split text
+Masked text
+
+3. Marketing Blocks
+
+Hero
+Services
+Portfolio
+Case studies
+CTA
+
+4. Images
+
+Image reveal
+Image gallery
+Masonry
+Parallax
+Hover image
+
+5. Scroll
+
+Horizontal scroll
+Sticky sections
+Parallax
+Scroll-triggered animation
+
+6. Interactive
+
+Magnetic buttons
+Hover interactions
+Cursor interactions
+Image following cursor
+
+7. Stats
+
+Big numbers
+Counter
+Scroll counter
+
+8. Forms
+
+Contact form
+Minimal input
+Animated form
+
+9. Logo/Brand
+
+Logo marquee
+Logo wall
+Brand showcase
+
+10. Maps
+
+India map
+Animated geographic visualization
+🚫 Components I DON'T want for Corn & Cheese
+
+This is important because Webfirst will give you a lot of flashy stuff.
+
+Avoid:
+
+❌ Random 3D models
+❌ 3D cubes everywhere
+❌ Floating spheres
+❌ Generic SaaS bento grids
+❌ Glassmorphism cards
+❌ Excessive gradients
+❌ AI-looking glowing brains
+❌ Random particle backgrounds
+❌ Dashboard UI
+❌ Excessive rounded cards
+❌ Generic “AI agency” visuals
+❌ Stock-photo-heavy sections
+
+The 3D-heavy result we previously got from Antigravity was specifically not the direction. We want art direction + typography + real campaign imagery + editorial composition + sophisticated motion. 3D, if used at all, should be limited to a couple of meaningful moments.
+
+What I need from you next
+
+Don't send me the entire Webfirst library.
+
+Let's do it section by section.
+
+Start with:
+
+HERO
+
+Go to Webfirst Dev and search things like:
+
+halftone
+shader
+hero
+text reveal
+animated background
+
+Then send me screenshots of the components you find.
+
+I'll tell you:
+
+✅ PICK THIS
+🟡 MAYBE
+❌ DON'T USE THIS
+
+Then I'll create the exact Claude Code prompt for the selected component, adapted specifically for Corn & Cheese Media rather than leaving the demo's original content like “Nexus Flow.”
+
+This way we can build the website one controlled section at a time, without Claude Code turning it into another generic/3D-heavy website.
+
+Pasted text(4).txt
+Document
+This is the prompt for the testomonial page.
+
+Yes — this is the Circular Testimonials component you found. It uses Framer Motion for the quote transitions, has three rotating testimonial images, autoplay, arrow navigation, keyboard navigation, and responsive behavior.
+
+For Corn & Cheese Media, I would use this component, but we should NOT copy the demo content or styling as-is.
+
+What we'll change
+
+Keep:
+
+Circular/stacked testimonial image arrangement
+Center active testimonial
+Previous/Next controls
+Smooth Framer Motion transition
+Autoplay
+Responsive layout
+Word-by-word quote reveal
+
+Change:
+
+Restaurant testimonials → actual Corn & Cheese client testimonials
+Demo people's photos → real client/person photos if available
+Blue hover color → Corn & Cheese brand color
+Rounded generic cards → match the editorial/premium agency design
+Typography → match the website's font system
+Section background → match the surrounding Corn & Cheese section
+Remove any unnecessary demo wrapper/backgrounds
+Make the component feel like part of the same website, not a pasted Webfirst component.
+
+The original demo requires react-icons and framer-motion; Claude Code should first check whether those already exist before installing them.
+
+One important thing
+
+Don't send this component to Claude Code yet if you haven't finalized the testimonial content.
+
+I need the actual Corn & Cheese testimonial content — names, designation/company, quote, and photos (if you have them). Then I can give you a precise Claude Code prompt that says exactly what to replace and how to style it.
+
+If you have the Corn & Cheese website content PDF/document, upload it here and I'll extract the testimonial section from it and prepare the implementation prompt.
+
+chatgpt, i've given you the details of the testomonial and heroic page details, i hope you understanded that,now i'll give the overall prompt for the website you just have mention that the heroic and testmonial page propmt is in the folder it self, heroic.txt and testmonial.txt claude code have to access this prompts for the both of the page.
+
+Yes, I understand exactly what you want.
+
+You are going to give me the overall/master prompt for the Corn & Cheese website. In that prompt, we should explicitly tell Claude Code that the detailed implementation instructions for two sections already exist as separate files in the project:
+
+heroic.txt → contains the Hero section implementation prompt
+testomonial.txt → contains the Testimonials section implementation prompt
+
+Claude Code must read and follow those files, rather than us duplicating their contents inside the master prompt.
+
+I'll make the overall prompt say something along these lines:
+
+IMPORTANT — SECTION-SPECIFIC INSTRUCTIONS
+
+This website is being developed section by section. Some sections already have their own detailed implementation instructions stored as text files in the project.
+
+Before implementing the website, inspect the project root and locate these files:
+
+heroic.txt
+testomonial.txt
+Hero Section
+
+The file:
+
+heroic.txt
+
+contains the complete and specific instructions for the Hero section, including its visual treatment, component selection, animation, layout, and implementation requirements.
+
+You MUST read heroic.txt before implementing the Hero section.
+
+Treat the contents of heroic.txt as the authoritative implementation specification for the Hero section.
+
+Do not replace, simplify, reinterpret, or ignore its instructions unless doing so is technically necessary for compatibility with the existing project.
+
+Testimonials Section
+
+The file:
+
+testomonial.txt
+
+contains the complete and specific instructions for the Testimonials section, including the selected testimonial component, animation, layout, styling, and required adaptations for Corn & Cheese Media.
+
+You MUST read testomonial.txt before implementing the Testimonials section.
+
+Treat the contents of testomonial.txt as the authoritative implementation specification for the Testimonials section.
+
+Do not use the demo content from the original component if testomonial.txt specifies different Corn & Cheese content.
+
+Implementation Priority
+
+Follow this priority when implementing the website:
+
+Existing project architecture and working code
+The overall website design/content requirements in this master prompt
+Section-specific instructions stored in:
+heroic.txt
+testomonial.txt
+Existing reusable components and design system
+Your own implementation decisions only where the above instructions do not specify something.
+Do NOT duplicate these instructions
+
+Do not recreate the Hero or Testimonials specifications from memory.
+
+Read the corresponding .txt file and implement directly from those instructions.
+
+The purpose of these files is to keep the website development modular and prevent the master prompt from becoming unnecessarily large.
+
+Important
+
+The website is being built incrementally.
+
+Do not assume that every section needs to be implemented using the same component style.
+
+Each section should feel like part of the same Corn & Cheese Media brand while still using the most appropriate component and interaction specified for that section.
+
+Now send me your overall/master website prompt.
+
+I'll integrate this file-reference instruction into it without changing your actual website requirements.
+
+You are given a task to integrate an existing React component in the codebase
+
+The codebase should support:
+
+shadcn project structure
+Tailwind CSS
+Typescript
+
+If it doesn't, provide instructions on how to setup project via shadcn CLI, install Tailwind or Typescript.
+
+Determine the default path for components and styles.
+If default path for components is not /components/ui, provide instructions on why it's important to create this folder
+Copy-paste this component to /components/ui folder:
+
+halftone-flow.tsx
+import { useMemo, type CSSProperties } from "react";
+
+type EffectMode = "dark" | "light";
+
+export type HalftoneFlowProps = {
+  mode?: EffectMode;
+  hue?: number;
+  saturation?: number;
+  brightness?: number;
+  className?: string;
+  style?: CSSProperties;
+};
+
+const BACKGROUND = "#000000";
+const TARGETS = [{ selector: "#glcanvas", role: "background" }] as const;
+
+function clamp(value: number, minimum: number, maximum: number) {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
+function buildFocusedDocument(sourceHtml: string) {
+  const targetJson = JSON.stringify(TARGETS).replace(/</g, "\\u003c");
+  const focusStyle = `<style data-threeui-focus>
+html, body { width: 100% !important; height: 100% !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; background: ${BACKGROUND} !important; }
+body { position: relative !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+body > * { visibility: hidden !important; }
+body[data-threeui-ready] > [data-threeui-role] { visibility: visible !important; }
+[data-threeui-residual] { display: none !important; }
+[data-threeui-role="background"] { position: fixed !important; inset: 0 !important; width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; z-index: 0 !important; opacity: 1 !important; pointer-events: none !important; }
+[data-threeui-role="ui"] { position: relative !important; z-index: 1 !important; width: min(calc(100% - 32px), var(--threeui-target-width, 1040px)) !important; max-width: none !important; max-height: calc(100% - 32px) !important; margin: auto !important; overflow: auto !important; opacity: 1 !important; transform: none !important; filter: none !important; flex: none !important; box-sizing: border-box !important; }
+</style>`;
+  const focusScript = `<script data-threeui-focus>
+(function () {
+  var isolated = false;
+  function isolate() {
+    if (isolated) return;
+    var specs = ${targetJson};
+    var roots = [];
+    specs.forEach(function (spec) {
+      var element = document.querySelector(spec.selector);
+      if (!element) return;
+      element.setAttribute('data-threeui-role', spec.role);
+      if (spec.width) element.style.setProperty('--threeui-target-width', spec.width);
+      if (!roots.some(function (root) { return root.contains(element); })) roots.push(element);
+    });
+    if (!roots.length) return;
+    isolated = true;
+    roots.forEach(function (root) { document.body.appendChild(root); });
+    Array.from(document.body.children).forEach(function (element) {
+      if (roots.indexOf(element) !== -1) return;
+      element.setAttribute('data-threeui-residual', '');
+      element.setAttribute('aria-hidden', 'true');
+      if ('inert' in element) element.inert = true;
+    });
+    document.body.setAttribute('data-threeui-ready', '');
+    requestAnimationFrame(function () { window.dispatchEvent(new Event('resize')); });
+  }
+  function scheduleIsolation() { setTimeout(isolate, 100); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', scheduleIsolation, { once: true });
+  else scheduleIsolation();
+  window.addEventListener('load', isolate, { once: true });
+})();
+</script>`;
+  return sourceHtml
+    .replace(/<\/head>/i, `${focusStyle}</head>`)
+    .replace(/<\/body>/i, `${focusScript}</body>`);
+}
+
+function HalftoneFlow({
+  mode = "dark",
+  hue = 0,
+  saturation = 1,
+  brightness = 1,
+  className,
+  style,
+}: HalftoneFlowProps) {
+  const safeMode: EffectMode = mode === "light" ? "light" : "dark";
+  const source = useMemo(
+    () => buildFocusedDocument(NEXUS_UNIFIED_FLOW_HTML),
+    [],
+  );
+  const safeHue = clamp(hue, -180, 180);
+  const safeSaturation = clamp(saturation, 0, 2);
+  const safeBrightness = clamp(brightness, 0.35, 1.65);
+  const filter =
+    safeHue === 0 && safeSaturation === 1 && safeBrightness === 1
+      ? undefined
+      : `hue-rotate(${safeHue}deg) saturate(${safeSaturation}) brightness(${safeBrightness})`;
+
+  return (
+    <iframe
+      className={className}
+      data-mode={safeMode}
+      title="Nexus unified halftone flow"
+      srcDoc={source}
+      sandbox="allow-scripts"
+      loading="eager"
+      style={{
+        display: "block",
+        width: "100%",
+        height: "100%",
+        border: 0,
+        background: BACKGROUND,
+        filter,
+        ...style,
+      }}
+    />
+  );
+}
+
+const NEXUS_UNIFIED_FLOW_HTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Unified Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-black text-white font-sans min-h-screen overflow-x-hidden antialiased selection:bg-red-500/30 flex flex-col relative" style="font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+
+    <!-- WebGL Background -->
+    <canvas id="glcanvas" class="fixed inset-0 w-full h-full -z-20"></canvas>
+
+    <!-- Overlay structural lines to match reference -->
+    <div class="fixed inset-0 pointer-events-none -z-10 w-full h-full">
+        <!-- Thin angled lines behind logo area -->
+        <div class="absolute top-0 left-0 w-[600px] h-[600px] border-l border-t border-white/5 origin-top-left rotate-[15deg] translate-x-[-100px] translate-y-[-100px]"></div>
+        <div class="absolute top-0 left-0 w-[800px] h-[800px] border-l border-white/5 origin-top-left rotate-[-25deg] translate-x-[200px] translate-y-[-50px]"></div>
+        <!-- Horizontal grid line -->
+        <div class="absolute top-[20%] w-full border-t border-white/5"></div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="flex-1 flex flex-col relative z-10 w-full max-w-[1600px] mx-auto min-h-screen border-l border-r border-white/10">
+
+        <!-- Hero Section -->
+        <main class="flex-1 flex flex-col lg:flex-row items-center lg:items-center justify-between px-8 sm:px-16 lg:px-24 py-24 lg:py-0 relative">
+
+            <!-- Left: Logo & Title -->
+            <div class="flex items-center gap-6 group cursor-default w-full lg:w-1/2 mb-20 lg:mb-0">
+                <!-- Abstract Geometric Icon -->
+                <svg width="72" height="72" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white transform group-hover:scale-105 transition-transform duration-500 ease-out" style="flex-shrink: 0;">
+                    <path d="M10 20 L50 40 L90 10 L80 50 L95 85 L50 60 L15 90 L25 50 Z" fill="currentColor"/>
+                    <path d="M50 40 L50 60" stroke="black" stroke-width="2"/>
+                    <path d="M10 20 L50 60" stroke="black" stroke-width="2"/>
+                </svg>
+
+                <!-- Masked Reveal Title -->
+                <h1 class="text-7xl sm:text-8xl lg:text-9xl font-semibold tracking-tighter lowercase leading-none flex flex-wrap gap-x-4 gap-y-2 reveal-text">
+                    <span class="inline-block overflow-hidden pt-2">
+                        <span class="reveal-word inline-block translate-y-[120%] pb-2">nexus</span>
+                    </span>
+                    <span class="inline-block overflow-hidden pt-2">
+                        <span class="reveal-word inline-block translate-y-[120%] pb-2">flow</span>
+                    </span>
+                </h1>
+            </div>
+
+            <!-- Right: Input & Social Proof -->
+            <div class="w-full lg:w-1/2 flex flex-col items-start lg:items-end relative">
+                <!-- Offset Input Container -->
+                <div class="relative group w-full max-w-md">
+                    <!-- Stylized Shadow/Offset with subtle gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#A63A29] to-[#732215] translate-x-3 translate-y-3 transition-transform duration-300 ease-out group-hover:translate-x-4 group-hover:translate-y-4"></div>
+
+                    <!-- Input Box with Premium Gradient Border Treatment -->
+                    <div class="relative z-10 p-[1px] bg-gradient-to-r from-white/40 via-white/10 to-white/30">
+                        <div class="bg-white flex items-center justify-between p-1 w-full h-[60px] sm:h-[72px]">
+                            <input type="email" placeholder="Join the waitlist..." class="w-full h-full bg-transparent text-black outline-none px-6 text-base sm:text-lg font-medium placeholder:text-gray-500 placeholder:font-normal" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Users Proof -->
+                <div class="flex flex-row items-center gap-4 mt-10 mr-2">
+                    <span class="text-sm font-medium tracking-wide">5,102+ early adopters</span>
+                    <div class="flex -space-x-3">
+                        <!-- Avatars with Gradient Borders -->
+                        <div class="w-8 h-8 rounded-full p-[2px] bg-gradient-to-br from-white/50 to-white/10 bg-black shadow-sm">
+                            <img class="w-full h-full rounded-full object-cover" src="https://cdn.21st.dev/assets/localized/868ee7e6983767d120387ecbd017fd6870f85aa0c5aeba6db06d54e0504c2934.jpg" alt="User avatar">
+                        </div>
+                        <div class="w-8 h-8 rounded-full p-[2px] bg-gradient-to-br from-white/50 to-white/10 bg-black shadow-sm">
+                            <img class="w-full h-full rounded-full object-cover" src="https://cdn.21st.dev/assets/localized/95767b6c354c4ac206cadaac8937b5a7b74ea1e227fa2f578703674d3725bcdd.jpg" alt="User avatar">
+                        </div>
+                        <div class="w-8 h-8 rounded-full p-[2px] bg-gradient-to-br from-white/50 to-white/10 bg-black shadow-sm">
+                            <img class="w-full h-full rounded-full object-cover" src="https://cdn.21st.dev/assets/localized/4526a25eb7c0b86d945cf5e43ed53e85be9821edb8dc26017ed372b1450ae6f6.jpg" alt="User avatar">
+                        </div>
+                        <div class="w-8 h-8 rounded-full p-[2px] bg-gradient-to-br from-white/50 to-white/10 bg-black shadow-sm">
+                            <img class="w-full h-full rounded-full object-cover" src="https://cdn.21st.dev/assets/localized/3c53a7cdf511b5078b720e0846641af3f3627ccd5ad310dc21346f24e8cc7fb5.jpg" alt="User avatar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Structural Horizontal Divider -->
+        <div class="w-full border-t border-white/20"></div>
+
+        <!-- Footer Section -->
+        <footer class="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[300px]">
+
+            <!-- Footer Left: Brand & Desc -->
+            <div class="lg:col-span-4 p-8 sm:p-12 lg:p-16 border-b lg:border-b-0 lg:border-r border-white/20 flex flex-col gap-6">
+                <div class="flex items-center gap-3">
+                    <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white">
+                        <path d="M10 20 L50 40 L90 10 L80 50 L95 85 L50 60 L15 90 L25 50 Z" fill="currentColor"/>
+                    </svg>
+                    <span class="text-base font-semibold tracking-tight">Nexus</span>
+                </div>
+                <p class="text-sm text-gray-400 leading-relaxed max-w-[280px]">
+                    Your unified ecosystem to synchronize thoughts, maintain momentum, and build effortlessly.
+                </p>
+            </div>
+
+            <!-- Footer Right: Links -->
+            <div class="lg:col-span-8 p-8 sm:p-12 lg:p-16 grid grid-cols-2 sm:grid-cols-3 gap-12 sm:gap-8">
+                <!-- Column 1 -->
+                <div class="flex flex-col gap-5">
+                    <h3 class="text-sm font-semibold tracking-tight text-white mb-1">Product</h3>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Capabilities</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Mechanism</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Plans</a>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="flex flex-col gap-5">
+                    <h3 class="text-sm font-semibold tracking-tight text-white mb-1">Company</h3>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Our Story</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Join Us</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Get in Touch</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Media</a>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="flex flex-col gap-5">
+                    <h3 class="text-sm font-semibold tracking-tight text-white mb-1">Resources</h3>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Support</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Changelog</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Documentation</a>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // --- WebGL Background Animation ---
+        const canvas = document.getElementById('glcanvas');
+        const gl = canvas.getContext('webgl');
+
+        if (!gl) {
+            console.error('WebGL not supported');
+        } else {
+            // Resize handler
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                gl.viewport(0, 0, canvas.width, canvas.height);
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            // Vertex Shader
+            const vsSource = `
+                attribute vec4 aVertexPosition;
+                void main() {
+                    gl_Position = aVertexPosition;
+                }
+            `;
+
+            // Fragment Shader (Halftone Flow)
+            const fsSource = `
+                precision highp float;
+                uniform vec2 u_resolution;
+                uniform float u_time;
+
+                mat2 rot(float a) {
+                    float s = sin(a), c = cos(a);
+                    return mat2(c, -s, s, c);
+                }
+
+                void main() {
+                    vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+                    vec2 p = uv * 2.0 - 1.0;
+                    p.x *= u_resolution.x / u_resolution.y;
+
+                    vec2 flow_uv = p;
+                    float time = u_time * 0.4;
+
+                    for(float i = 1.0; i < 4.0; i++) {
+                        flow_uv *= rot(time * 0.1);
+                        flow_uv.x += sin(flow_uv.y * 2.0 * i + time) * 0.5;
+                        flow_uv.y += cos(flow_uv.x * 1.5 * i - time * 0.8) * 0.5;
+                    }
+
+                    float intensity = sin(flow_uv.x * 2.0 + flow_uv.y * 3.0) * 0.5 + 0.5;
+
+                    vec3 col_dark = vec3(0.02, 0.0, 0.0);
+                    vec3 col_red = vec3(0.8, 0.1, 0.05);
+                    vec3 col_bright = vec3(1.0, 0.6, 0.2);
+
+                    vec3 fluid_color = mix(col_dark, col_red, smoothstep(0.2, 0.6, intensity));
+                    fluid_color = mix(fluid_color, col_bright, smoothstep(0.7, 1.0, intensity));
+
+                    float gridSize = 6.0;
+                    vec2 grid_uv = gl_FragCoord.xy / gridSize;
+                    vec2 cell_uv = fract(grid_uv) - 0.5;
+
+                    float dist = length(cell_uv);
+                    float radius = intensity * 0.45;
+                    float dot_mask = smoothstep(radius, radius - 0.1, dist);
+
+                    vec3 final_color = mix(vec3(0.0), fluid_color, dot_mask);
+                    final_color += fluid_color * 0.15;
+
+                    gl_FragColor = vec4(final_color, 1.0);
+                }
+            `;
+
+            function compileShader(gl, type, source) {
+                const shader = gl.createShader(type);
+                gl.shaderSource(shader, source);
+                gl.compileShader(shader);
+                if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                    console.error(gl.getShaderInfoLog(shader));
+                    gl.deleteShader(shader);
+                    return null;
+                }
+                return shader;
+            }
+
+            const vertexShader = compileShader(gl, gl.VERTEX_SHADER, vsSource);
+            const fragmentShader = compileShader(gl, gl.FRAGMENT_SHADER, fsSource);
+
+            const program = gl.createProgram();
+            gl.attachShader(program, vertexShader);
+            gl.attachShader(program, fragmentShader);
+            gl.linkProgram(program);
+            gl.useProgram(program);
+
+            const positions = new Float32Array([
+                -1.0,  1.0,
+                 1.0,  1.0,
+                -1.0, -1.0,
+                 1.0, -1.0,
+            ]);
+            const positionBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
+
+            const positionLocation = gl.getAttribLocation(program, "aVertexPosition");
+            gl.enableVertexAttribArray(positionLocation);
+            gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
+
+            const resolutionLocation = gl.getUniformLocation(program, "u_resolution");
+            const timeLocation = gl.getUniformLocation(program, "u_time");
+
+            let startTime = Date.now();
+            function render() {
+                gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
+                gl.uniform1f(timeLocation, (Date.now() - startTime) / 1000.0);
+
+                gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+                requestAnimationFrame(render);
+            }
+            render();
+        }
+
+        // --- GSAP ScrollTrigger Masked Word Reveal ---
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.to(".reveal-word", {
+                y: "0%",
+                duration: 1.2,
+                stagger: 0.15,
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: ".reveal-text",
+                    start: "top 90%",
+                }
+            });
+        });
+    </script>
+</body>
+</html>`;
+
+export default HalftoneFlow;
+export { HalftoneFlow };
+
+
+demo.tsx
+"use client";
+
+import HalftoneFlow from "@/components/ui/halftone-flow";
+
+export default function HalftoneFlowDemo() {
+  return (
+    <div className="relative w-full h-[420px] overflow-hidden rounded-xl bg-black">
+      <HalftoneFlow className="absolute inset-0 h-full w-full" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="text-2xl font-semibold tracking-tight text-white">
+          Halftone Flow
+        </span>
+      </div>
+    </div>
+  );
+}
+
+
+
+Implementation Guidelines
+
+Analyze the component structure and identify all required dependencies
+Review the component's argumens and state
+Identify any required context providers or hooks and install them
+Questions to Ask
+What data/props will be passed to this component?
+Are there any specific state management requirements?
+Are there any required assets (images, icons, etc.)?
+What is the expected responsive behavior?
+What is the best place to use this component in the app?
+
+Steps to integrate
+0. Copy paste all the code above in the correct directories
+
+Install external dependencies
+Fill image assets with Unsplash stock images you know exist
+Use lucide-react icons for svgs or logos if component requires them
+Close

@@ -1,0 +1,491 @@
+# CORN & CHEESE MEDIA — WEBSITE DESIGN PROMPT
+
+Create a premium, modern website for **Corn & Cheese Media**, a creative, advertising and consumer intelligence agency.
+
+Use the **attached Corn & Cheese Media logo** as the official brand identity. Do not recreate, distort, recolor or replace the logo.
+
+Use the **attached Website Content PDF as the single source of truth for all website copy**. Use the exact approved headlines, descriptions, services, brands and contact information from the PDF. Do not invent additional claims, statistics, services or pricing.
+
+## DESIGN DIRECTION
+
+The website should feel like a combination of:
+
+**Apple × Burberry × Schbang**
+
+Apple:
+
+* Minimalism
+* Clean layouts
+* Sophisticated whitespace
+* Product style storytelling
+* Smooth cinematic transitions
+
+Burberry:
+
+* Luxury editorial aesthetic
+* Fashion inspired typography
+* Strong photography
+* Premium visual composition
+* Restrained color palette
+
+Schbang:
+
+* Bold oversized headlines
+* Confident agency communication
+* Strong scrolling storytelling
+* Creative transitions
+* Unexpected but tasteful interactions
+
+Do NOT create a generic digital marketing agency website.
+
+## BRAND COLORS
+
+Use the Corn & Cheese logo as the color reference.
+
+Primary:
+
+* White `#FFFFFF`
+* Near Black `#0A0A0A`
+* Brand Blue `#1677FF`
+
+Secondary:
+
+* Off White `#F7F8FA`
+* Dark Grey `#5F6368`
+* Border `#E5E7EB`
+* Light Blue `#EAF2FF`
+
+Keep the website primarily **white, black and blue**.
+
+Blue must be used as an accent, not as the dominant background.
+
+Do not use yellow.
+
+## TYPOGRAPHY
+
+Use:
+
+**Montserrat + Karla**
+
+Montserrat:
+
+* Hero headlines
+* Section headings
+* Navigation
+* Buttons
+* Large numbers
+
+Karla:
+
+* Paragraphs
+* Supporting copy
+* Forms
+* Small descriptions
+
+Use very large, bold Montserrat typography inspired by premium editorial websites.
+
+## HERO
+
+Use the **attached/downloaded Hero Section component**.
+
+Do not replace the hero component with a generic hero.
+
+Blend the component into the Corn & Cheese visual identity.
+
+Opening experience:
+
+First show the Ogilvy quote from the Website Content PDF as a short opening screen.
+
+Then smoothly transition into:
+
+**Hi, we're Corn & Cheese Media.**
+
+Supporting copy from the approved Website Content PDF.
+
+CTA:
+
+**Start With The Truth →**
+
+The transition from the opening quote into the hero should feel cinematic and intentional.
+
+## SCROLL EXPERIENCE
+
+The existing scrolling and transition animation is already good.
+
+**Preserve the existing animation style.**
+
+Do not completely redesign the animation system.
+
+Use the same animation language throughout the website:
+
+* Smooth scrolling
+* Text reveal
+* Image reveal
+* Section transitions
+* Parallax
+* Sticky storytelling
+* Horizontal scrolling where appropriate
+* Subtle scale transitions
+* Smooth page transitions
+
+Animations should feel connected rather than each section having a different animation style.
+
+Keep animations elegant and fast.
+
+## CUSTOM CURSOR
+
+Create a premium custom cursor.
+
+Normal:
+small black cursor.
+
+Hover:
+blue circular cursor using `#1677FF`.
+
+For interactive elements:
+
+* Cursor expands
+* Arrow appears
+* Subtle blue glow
+* Magnetic movement
+
+Keep the cursor minimal and sophisticated.
+
+## HOMEPAGE STRUCTURE
+
+Follow the approved Website Content PDF.
+
+### 01 — Opening Screen
+
+Use the exact Ogilvy quote from the PDF.
+
+### 02 — Hero
+
+**Hi, we're Corn & Cheese Media.**
+
+Use the approved supporting copy and CTA.
+
+### 03 — What We Do
+
+**We look at data before we look for ideas.**
+
+Use the approved content.
+
+### 04 — Who We Are
+
+**Corn & Cheese Media**
+
+Use the approved explanation of the Corn and Cheese concept.
+
+### 05 — Solutions
+
+**One team for everything your brand needs.**
+
+Present the six approved solutions:
+
+* Social Media Optimization
+* Influencer Marketing
+* Performance Marketing
+* Website Development
+* Manufacturing Marketing
+* Deep Tech Marketing
+
+Do not display them as ordinary SaaS cards.
+
+Use large editorial typography, imagery and scroll interactions.
+
+### 06 — Work
+
+Headline:
+
+**Brands who trusted us with the truth.**
+
+Display the approved client names:
+
+* Vega Beauty
+* Neurobroma
+* Viraj Profiles Limited
+* Kasturi Pakka
+* Kalpataru Homeopathy Clinic
+
+Create an elegant logo / brand grid.
+
+Keep logos monochrome where possible.
+
+On hover, introduce subtle Corn & Cheese blue.
+
+### 07 — Testimonials
+
+Use the **attached/downloaded Circular Testimonials component**.
+
+Preserve its core interaction and animation.
+
+Blend it visually into the website so it feels like part of the Corn & Cheese design system.
+
+Use:
+
+* Circular image arrangement
+* Smooth transitions
+* Active testimonial state
+* Arrow navigation
+* Word by word quote animation
+
+Do not make it look like a generic testimonial widget.
+
+### 08 — Closing CTA
+
+Use the approved closing copy:
+
+**If your brand's ready to grow on data instead of guesswork, let's talk.**
+
+CTA:
+
+**Contact Now →**
+
+## WHAT WE DO PAGE
+
+Create a dedicated page using the exact approved content from the PDF.
+
+Headline:
+
+**We start with your consumer.**
+
+Present the three step process:
+
+**Step One: We Look At The Data**
+
+**Step Two: We Find What Matters**
+
+**Step Three: We Build The Strategy**
+
+Represent this as an interactive vertical / horizontal storytelling experience instead of basic cards.
+
+## WHO WE ARE PAGE
+
+Headline:
+
+**Why we're called Corn & Cheese Media.**
+
+Use the exact approved explanation from the PDF.
+
+Create a highly editorial storytelling layout.
+
+Use the Corn & Cheese logo mark as a subtle visual motif.
+
+## SOLUTIONS PAGE
+
+Headline:
+
+**Solutions built for you.**
+
+Create individual immersive sections for:
+
+Social Media Optimization
+Influencer Marketing
+Performance Marketing
+Website Development
+Manufacturing Marketing
+Deep Tech Marketing
+
+Use the exact descriptions from the PDF.
+
+Each solution should have:
+
+* Large number
+* Large headline
+* Description
+* Visual
+* Subtle hover interaction
+* Scroll reveal
+
+## WORK PAGE
+
+Headline:
+
+**Brands who trusted us with the truth.**
+
+Display the approved five brands in an elegant grid.
+
+No invented case studies.
+
+No invented results.
+
+No fake statistics.
+
+## CONTACT PAGE
+
+Headline:
+
+**Let's talk about your brand.**
+
+Use the approved copy from the PDF.
+
+Display:
+
+Email:
+**[hello@cornandcheese.com](mailto:hello@cornandcheese.com)**
+
+Phone:
+**+91 93225 59284**
+
+WhatsApp:
+**+91 93225 59284**
+
+Studio:
+**Mumbai. Pune.**
+
+Create a premium contact form.
+
+Include:
+
+* Name
+* Company
+* Email
+* Phone
+* Website / Social Link
+* Services Interested In
+* Message
+
+Buttons:
+
+**Send Message**
+
+**WhatsApp Us**
+
+Email submission should open / send to the official Corn & Cheese email.
+
+WhatsApp button should use the approved phone number.
+
+## IMPORTANT CONTENT RULE
+
+The attached **Website Content PDF is the source of truth**.
+
+Do not:
+
+* Invent pricing
+* Invent statistics
+* Invent clients
+* Invent case studies
+* Invent services
+* Rewrite approved copy unnecessarily
+* Add unsupported claims
+
+Preserve the tone and terminology of the PDF.
+## GLASS BUTTON SYSTEM
+
+Use **premium glass buttons** throughout the website for primary interactive CTAs.
+
+Glass buttons should have:
+
+* Semi transparent white background
+* `backdrop-filter: blur(12px)`
+* Very subtle white border
+* Soft shadow
+* Slight transparency
+* Rounded but not overly pill shaped
+* Subtle Corn & Cheese blue glow on hover
+
+### Default Glass Button
+
+Background:
+`rgba(255, 255, 255, 0.55)`
+
+Border:
+`rgba(10, 10, 10, 0.12)`
+
+Text:
+`#0A0A0A`
+
+Backdrop blur:
+`12px`
+
+### Hover State
+
+Background:
+`#1677FF`
+
+Text:
+`#FFFFFF`
+
+Border:
+`#1677FF`
+
+Add a subtle blue glow:
+
+`rgba(22, 119, 255, 0.20)`
+
+### Button Interaction
+
+On hover:
+
+* Button subtly moves toward the cursor
+* Background smoothly transitions from transparent glass to Corn & Cheese blue
+* Text changes to white
+* Cursor expands
+* Arrow appears
+* Very subtle scale animation
+
+Keep the animation smooth and premium.
+
+### Important
+
+Do NOT use glassmorphism everywhere.
+
+Use glass effects primarily for:
+
+* Hero CTA
+* Navigation CTA
+* Service links
+* Contact CTA
+* Important interactive buttons
+
+Cards and content sections should remain mostly clean and minimal.
+
+The glass effect must feel **luxurious, subtle and editorial**, consistent with Apple/Burberry aesthetics rather than a typical neon/glassmorphism landing page.
+
+
+## LOGO
+
+Use the attached Corn & Cheese Media logo throughout the website.
+
+The logo should be clearly visible on the white background.
+
+Use the black wordmark version where necessary for visibility.
+
+Do not place the white logo on a white background.
+
+## RESPONSIVE DESIGN
+
+Make the entire website responsive.
+
+Desktop:
+large editorial compositions and immersive animations.
+
+Tablet:
+maintain hierarchy while reducing animation intensity.
+
+Mobile:
+clean vertical storytelling, readable typography and lightweight interactions.
+
+Do not sacrifice usability for animation.
+
+## FINAL EXPERIENCE
+
+The final website should feel like a **premium creative intelligence and advertising studio**, not a template.
+
+The first impression should be:
+
+**"This is a serious, modern creative agency."**
+
+The experience should combine:
+
+**Apple's restraint
+Burberry's luxury
+Schbang's confidence
+Corn & Cheese's identity**
+
+Use **typography, photography, whitespace, scrolling and subtle interaction** as the primary design tools.
+
+Avoid excessive 3D, excessive gradients, excessive glassmorphism, generic cards and unnecessary animation.
+
+Make every section feel intentionally art directed.

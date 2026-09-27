@@ -1,0 +1,169 @@
+===== PAGE 1 =====
+CORN & CHEESE MEDIA
+Website Content
+Revised copy for development, all pages, ready to place
+===== PAGE 2 =====
+PAGE 1: HOMEPAGE
+Homepage
+NOTE FOR DEVELOPER: Home is not a separate menu item. The logo click returns users here from any page.
+1. Opening Screen (loads first, before the hero)
+“A man who stops advertising to save money is like a man who stops a clock to save time.”
+David Ogilvy
+NOTE FOR DEVELOPER: Suggest this dissolves into the hero below on scroll or after about two seconds. It should feel like a held breath 
+before the brand speaks.
+2. Hero Section
+HEADLINE
+Hi, we're Corn & Cheese Media.
+SUBHEADLINE
+We build on data, not trends. Combining consumer insight with sharp creative and performance execution for 
+manufacturing, deep tech and category defining businesses across India.
+PRIMARY CTA BUTTON
+Start With The Truth →
+3. What We Do (Teaser)
+KICKER
+What We Do
+HEADLINE
+We look at data before we look for ideas.
+BODY
+We're a data plus advertising company. Before we write a single line of copy, we study how people actually 
+choose, think and behave with a product or service like yours. That's what tells us what will actually work, not 
+what's trending this week.
+CTA
+See What We Do →
+4. Who We Are (Teaser)
+KICKER
+Who We Are
+HEADLINE
+Corn & Cheese Media
+BODY
+Two ordinary things, put together the right way, become something people crave. That's the only kind of brand we 
+know how to build.
+CTA
+Know Us Better →
+5. Solutions (Teaser)
+KICKER
+Solutions
+HEADLINE
+===== PAGE 3 =====
+One team for everything your brand needs.
+GRID ITEMS (ICON + ONE LINE EACH)
+Social Media Optimization: Profiles and engagement tuned to grow organically.
+Influencer Marketing: Paid and barter creator partnerships that match your category.
+Performance Marketing: Meta and Google Ads built to convert, not just impress.
+Website Development: Fast websites built to convert, not just to inform.
+Manufacturing Marketing: Built for how manufacturing businesses actually sell.
+Deep Tech Marketing: For products too complex for surface level marketing.
+CTA
+Explore Solutions →
+6. Work (Teaser)
+KICKER
+Work
+HEADLINE
+Brands who trusted us with the truth.
+NOTE FOR DEVELOPER: Display as a logo strip: Vega Beauty, Neurobroma, Viraj Profiles Limited, Kasturi Pakka, Kalpataru 
+Homeopathy Clinic. Logos to follow separately, leave placeholders sized equally.
+7. Closing Section
+HEADLINE
+If your brand's ready to grow on data instead of guesswork, let's talk.
+CTA BUTTON
+Contact Now →
+===== PAGE 4 =====
+PAGE 2: WHAT WE DO
+What We Do
+HEADLINE
+We start with your consumer.
+INTRO
+We're a data plus advertising company. Every project we take on begins the same way, by understanding your 
+consumer before anything else gets built.
+Our Process
+Step One: We Look At The Data
+We start by getting into real data and real behaviour, not internal assumptions about who your customer is or what 
+they want.
+Step Two: We Find What Matters
+From that data we pull out the pattern that actually explains why people buy your product, or don't. That becomes 
+the one truth everything else is built on.
+Step Three: We Build The Strategy
+AI helps us move through this fast, but every strategic call on your brand is made by our team, not a machine.
+What This Looks Like In Practice
+This process runs behind everything we do for a client. That includes brand strategy and identity, always on 
+social, paid influencer and performance campaigns, and the website that has to carry all of it. We don't split the 
+brand side from the growth side. One team runs both, so nothing gets built apart from everything else.
+CTA
+See Our Solutions →
+===== PAGE 5 =====
+PAGE 3: WHO WE ARE
+Who We Are
+HEADLINE
+Why we're called Corn & Cheese Media.
+Corn is raw, pulled straight from the ground. It's the real, unfiltered evidence of how people actually think, choose 
+and behave.
+Cheese is crafted using that same raw material, transformed through time and skill into something richer than 
+where it started. It's strategy, design and creative judgement.
+On their own, both are ordinary. Put together, they become something people can't leave alone. That's the only 
+kind of brand building we do. Insight and craft, fused into one process, not split across two departments.
+A Note, Directly From Us
+We started Corn & Cheese Media because we kept watching good businesses hire marketing before they'd earned 
+the right to be understood.
+Every founder we respect makes decisions on evidence: unit economics, retention, customer calls. Then hands 
+their brand to an agency that works entirely on instinct. We built the version of this company that treats brand 
+building with the same rigor: research first, strategy second, creativity in service of both.
+AI gives us the speed to do this without the old cost or timeline. It has never been an excuse to skip the thinking.
+The Founding Team, Corn & Cheese Media
+===== PAGE 6 =====
+PAGE 4: SOLUTIONS
+Solutions
+HEADLINE
+Solutions built for you.
+Social Media Optimization
+Your profiles, tuned to actually earn reach, not just post on schedule. We fix what's stopping organic growth: 
+positioning on the profile itself, content rhythm and the engagement patterns platforms reward.
+Influencer Marketing
+Creator partnerships matched to your category and audience, run both paid and barter. We pick creators whose 
+audience overlaps with your buyer, not whoever has the biggest following.
+Performance Marketing
+Meta Ads and Google Ads built around a conversion goal, not a vanity metric. Every campaign is structured, 
+tested and optimized against what it actually needs to do: leads, sales or sign ups.
+Website Development
+Fast websites built to convert, that represent the brand properly instead of just hosting information. Built to move 
+a visitor toward a decision, not just describe the business to them.
+Manufacturing Marketing
+Marketing built for how manufacturing businesses actually sell. Long consideration cycles, technical buyers and 
+trust built over time. We specialize in this category and understand what actually moves a manufacturing buyer, 
+which most agencies built only for consumer brands don't.
+Deep Tech Marketing
+For founders building on deep tech and AI who need their product to reach the right audience, not just any 
+audience. Our team takes the time to understand how the product is actually built, so the marketing goes past the 
+surface and speaks credibly to a technical buyer.
+CTA
+Talk to Us About Your Brand →
+===== PAGE 7 =====
+PAGE 5: WORK
+Work
+HEADLINE
+Brands who trusted us with the truth.
+NOTE FOR DEVELOPER: This page displays client logos only, no case study copy. Arrange as an even grid. Logos for the below to be 
+supplied separately (Kasturi Pakka logo pending).
+Vega Beauty
+Neurobroma
+Viraj Profiles Limited
+Kasturi Pakka
+Kalpataru Homeopathy Clinic
+CTA BELOW THE GRID
+Want to be the next name here? Contact Now →
+===== PAGE 8 =====
+PAGE 6: CONTACT NOW
+Contact Now
+HEADLINE
+Let's talk about your brand.
+BODY
+Tell us where your brand is stuck, or where it's ready to grow. We'll get back to you.
+Email
+hello@cornandcheese.com
+Phone
++91 93225 59284
+WhatsApp
++91 93225 59284
+Studio
+Mumbai. Pune.
+NOTE FOR DEVELOPER: Phone number pulled from the official brochure. Please reconfirm against the dictated version (93222 59284) 
+before publishing, the last six digits differ.

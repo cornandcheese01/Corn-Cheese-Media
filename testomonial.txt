@@ -1,0 +1,993 @@
+Today 12:01 AM
+Pasted text(3).txt
+Document
+
+Yes — this is the right way to approach the Corn & Cheese website. Instead of asking Webfirst Dev for a whole website, we should build a component shopping list / component map first, then pick the best component for each section.
+
+For Corn & Cheese, I would not use every fancy component available. The site needs to feel like a premium creative advertising agency, with strong editorial composition, typography, campaign visuals and motion — not like a SaaS template.
+
+7
+What we need from Corn & Cheese
+
+Based on the Corn & Cheese direction we've already established, here's the component structure I'd target.
+
+#	Website section	Webfirst component category	What we need
+1	Hero	Background / Shader / Text	Halftone Flow + huge typography + minimal intro
+2	Brand statement	Text / Typography	“People change how they shop.”
+3	AI ecosystem	Marketing Block / Visual	“The Ecosystem of AI-Powered Advertising”
+4	Services	Marketing Blocks / Cards	Meta Ads, Google Ads, Influencer Marketing, Social Media Optimisation
+5	Universe / capabilities	Interactive / Scroll	Explore the different capabilities
+6	Selected work	Gallery / Images / Cards	Campaigns, brands, creative work
+7	Brand showcase	Logo wall / Marquee	Brinton, Purplle + other brands
+8	AI-first section	Shader / Interactive / Text	AI-FIRST marketing systems
+9	Numbers / impact	Stats / Typography	20+ brands, 200M+ impressions, ₹1Cr+ ad spend
+10	Pan India / reach	Map / Visual / Interactive	Pan India presence
+11	Contact CTA	CTA / Form	“Great Brands Don't Happen by Chance.”
+12	Footer	Footer / Navigation	Contact + social + agency information
+1. HERO — Most important
+
+This is where the Halftone Flow component you just gave me comes in.
+
+Webfirst categories to search:
+
+Backgrounds → Shader → WebGL → Halftone → Animated Background → Text Reveal
+
+We want:
+
+Visual
+
+Halftone Flow
+
+Typography
+
+People change how they shop.
+
+or the approved hero structure/content from your Corn & Cheese content.
+
+CTA
+
+Explore the Universe
+
+The hero should be very minimal.
+
+Don't select:
+
+3D objects
+floating UI
+excessive glassmorphism
+animated blobs
+SaaS dashboard-style hero
+random gradient backgrounds
+2. BRAND STATEMENT
+
+This should be a typography-first section, not a card section.
+
+Search Webfirst for:
+
+Text → Big Text → Text Reveal → Scroll Typography → Kinetic Typography
+
+The section can essentially be a huge statement:
+
+People change how they shop.
+
+Then supporting Corn & Cheese messaging underneath.
+
+This is where we can use scroll-based typography animation.
+
+3. AI ECOSYSTEM
+
+This is a major storytelling section.
+
+Search:
+
+Marketing Blocks → Feature Sections → Bento → Interactive Cards → Scroll Sections
+
+Content:
+
+The Ecosystem of AI-Powered Advertising
+
+Then explain the relationship between:
+
+AI → Consumer Intelligence → Creative → Media → Performance
+
+But I would not automatically use a normal 4-card grid.
+
+A more editorial/interactive component would fit Corn & Cheese much better.
+
+4. SERVICES
+
+We need a component capable of displaying the four core services:
+
+Meta Ads
+Google Ads
+Influencer Marketing
+Social Media Optimisation
+
+Search:
+
+Marketing Blocks → Services → Interactive Cards → Hover Cards → Accordion → Sticky Cards
+
+I'd particularly look for a large interactive service list rather than four tiny cards.
+
+For example:
+
+01  META ADS
+02  GOOGLE ADS
+03  INFLUENCER MARKETING
+04  SOCIAL MEDIA OPTIMISATION
+
+Hovering/clicking could change the accompanying image/video.
+
+That would feel much more like an advertising agency.
+
+5. "EXPLORE THE UNIVERSE"
+
+Since “Explore the Universe” is one of the important CTA concepts, we need an interactive transition here.
+
+Search:
+
+Scroll → Horizontal Scroll → Sticky Section → Parallax → Image Reveal → Text Reveal
+
+This can become the transition between capabilities and work.
+
+6. SELECTED WORK
+
+This is very important for an agency website.
+
+Search:
+
+Marketing Blocks → Portfolio → Case Studies → Image Gallery → Masonry → Horizontal Gallery → Project Cards
+
+But don't choose a generic portfolio grid.
+
+I'd prefer something like:
+
+PROJECT 01
+Large campaign image/video
+
+PROJECT 02
+Large campaign image/video
+
+PROJECT 03
+Large campaign image/video
+
+with large typography and scroll transitions.
+
+This is where real campaign imagery/video should dominate.
+
+7. BRAND SHOWCASE
+
+We need to establish credibility with brands such as:
+
+Brinton
+Purplle
+
+Search:
+
+Logo Cloud → Marquee → Logo Wall → Brand Showcase
+
+A subtle animated logo marquee would work.
+
+Don't make this a giant “Trusted by 50+ companies” SaaS section.
+
+Keep it editorial.
+
+8. AI-FIRST MARKETING SYSTEMS
+
+This deserves its own visual treatment because AI-FIRST marketing systems is a core positioning point.
+
+Search:
+
+Shader → Interactive Background → Data Visualization → Network → Grid → Animated Lines
+
+But don't turn it into a fake technical dashboard.
+
+Think:
+
+intelligence → data → consumer behaviour → creative → advertising
+
+with typography and motion.
+
+9. IMPACT / NUMBERS
+
+We already have strong numbers:
+
+20+
+Brands trusted
+
+200M+
+Campaign impressions
+
+₹1Cr+
+Ad spend managed
+
+AI-FIRST
+Marketing systems
+
+Search:
+
+Stats → Number Counter → Big Numbers → Scroll Counter → Typography
+
+I'd choose a huge-number typography component, not four standard statistic cards.
+
+Example:
+
+20+
+BRANDS TRUSTED
+
+200M+
+CAMPAIGN IMPRESSIONS
+
+₹1Cr+
+AD SPEND MANAGED
+
+AI-FIRST
+MARKETING SYSTEMS
+
+Numbers should animate as you scroll.
+
+10. PAN INDIA
+
+For this, search:
+
+Map → India Map → Interactive Map → Geographic → Animated Map
+
+We can have:
+
+Built for India. Designed to scale.
+
+or whatever exact copy is in your official Corn & Cheese content.
+
+The visual should communicate Pan India, rather than simply putting an India map for decoration.
+
+11. CONTACT
+
+This needs to be a major closing moment, not a tiny contact form.
+
+Your existing direction:
+
+Great Brands Don't Happen by Chance.
+
+CTA:
+
+Drop a Message
+
+Search:
+
+CTA → Contact → Form → Magnetic Button → Text Reveal
+
+I'd use a very large closing CTA with the form appearing as the user interacts.
+
+Email:
+
+hello@cornandcheese.com
+
+12. FOOTER
+
+Search:
+
+Footer → Minimal Footer → Agency Footer → Mega Footer
+
+Keep it simple.
+
+We don't need a huge SaaS footer.
+
+⭐ The Webfirst categories I want you to focus on
+
+When you're browsing Webfirst Dev, prioritize these:
+
+MUST HAVE
+
+1. Backgrounds
+
+Halftone
+Shader
+WebGL
+Animated backgrounds
+
+2. Typography
+
+Text reveal
+Kinetic typography
+Scroll text
+Split text
+Masked text
+
+3. Marketing Blocks
+
+Hero
+Services
+Portfolio
+Case studies
+CTA
+
+4. Images
+
+Image reveal
+Image gallery
+Masonry
+Parallax
+Hover image
+
+5. Scroll
+
+Horizontal scroll
+Sticky sections
+Parallax
+Scroll-triggered animation
+
+6. Interactive
+
+Magnetic buttons
+Hover interactions
+Cursor interactions
+Image following cursor
+
+7. Stats
+
+Big numbers
+Counter
+Scroll counter
+
+8. Forms
+
+Contact form
+Minimal input
+Animated form
+
+9. Logo/Brand
+
+Logo marquee
+Logo wall
+Brand showcase
+
+10. Maps
+
+India map
+Animated geographic visualization
+🚫 Components I DON'T want for Corn & Cheese
+
+This is important because Webfirst will give you a lot of flashy stuff.
+
+Avoid:
+
+❌ Random 3D models
+❌ 3D cubes everywhere
+❌ Floating spheres
+❌ Generic SaaS bento grids
+❌ Glassmorphism cards
+❌ Excessive gradients
+❌ AI-looking glowing brains
+❌ Random particle backgrounds
+❌ Dashboard UI
+❌ Excessive rounded cards
+❌ Generic “AI agency” visuals
+❌ Stock-photo-heavy sections
+
+The 3D-heavy result we previously got from Antigravity was specifically not the direction. We want art direction + typography + real campaign imagery + editorial composition + sophisticated motion. 3D, if used at all, should be limited to a couple of meaningful moments.
+
+What I need from you next
+
+Don't send me the entire Webfirst library.
+
+Let's do it section by section.
+
+Start with:
+
+HERO
+
+Go to Webfirst Dev and search things like:
+
+halftone
+shader
+hero
+text reveal
+animated background
+
+Then send me screenshots of the components you find.
+
+I'll tell you:
+
+✅ PICK THIS
+🟡 MAYBE
+❌ DON'T USE THIS
+
+Then I'll create the exact Claude Code prompt for the selected component, adapted specifically for Corn & Cheese Media rather than leaving the demo's original content like “Nexus Flow.”
+
+This way we can build the website one controlled section at a time, without Claude Code turning it into another generic/3D-heavy website.
+
+Pasted text(4).txt
+Document
+This is the prompt for the testomonial page.
+
+Yes — this is the Circular Testimonials component you found. It uses Framer Motion for the quote transitions, has three rotating testimonial images, autoplay, arrow navigation, keyboard navigation, and responsive behavior.
+
+For Corn & Cheese Media, I would use this component, but we should NOT copy the demo content or styling as-is.
+
+What we'll change
+
+Keep:
+
+Circular/stacked testimonial image arrangement
+Center active testimonial
+Previous/Next controls
+Smooth Framer Motion transition
+Autoplay
+Responsive layout
+Word-by-word quote reveal
+
+Change:
+
+Restaurant testimonials → actual Corn & Cheese client testimonials
+Demo people's photos → real client/person photos if available
+Blue hover color → Corn & Cheese brand color
+Rounded generic cards → match the editorial/premium agency design
+Typography → match the website's font system
+Section background → match the surrounding Corn & Cheese section
+Remove any unnecessary demo wrapper/backgrounds
+Make the component feel like part of the same website, not a pasted Webfirst component.
+
+The original demo requires react-icons and framer-motion; Claude Code should first check whether those already exist before installing them.
+
+One important thing
+
+Don't send this component to Claude Code yet if you haven't finalized the testimonial content.
+
+I need the actual Corn & Cheese testimonial content — names, designation/company, quote, and photos (if you have them). Then I can give you a precise Claude Code prompt that says exactly what to replace and how to style it.
+
+If you have the Corn & Cheese website content PDF/document, upload it here and I'll extract the testimonial section from it and prepare the implementation prompt.
+
+chatgpt, i've given you the details of the testomonial and heroic page details, i hope you understanded that,now i'll give the overall prompt for the website you just have mention that the heroic and testmonial page propmt is in the folder it self, heroic.txt and testmonial.txt claude code have to access this prompts for the both of the page.
+
+Yes, I understand exactly what you want.
+
+You are going to give me the overall/master prompt for the Corn & Cheese website. In that prompt, we should explicitly tell Claude Code that the detailed implementation instructions for two sections already exist as separate files in the project:
+
+heroic.txt → contains the Hero section implementation prompt
+testomonial.txt → contains the Testimonials section implementation prompt
+
+Claude Code must read and follow those files, rather than us duplicating their contents inside the master prompt.
+
+I'll make the overall prompt say something along these lines:
+
+IMPORTANT — SECTION-SPECIFIC INSTRUCTIONS
+
+This website is being developed section by section. Some sections already have their own detailed implementation instructions stored as text files in the project.
+
+Before implementing the website, inspect the project root and locate these files:
+
+heroic.txt
+testomonial.txt
+Hero Section
+
+The file:
+
+heroic.txt
+
+contains the complete and specific instructions for the Hero section, including its visual treatment, component selection, animation, layout, and implementation requirements.
+
+You MUST read heroic.txt before implementing the Hero section.
+
+Treat the contents of heroic.txt as the authoritative implementation specification for the Hero section.
+
+Do not replace, simplify, reinterpret, or ignore its instructions unless doing so is technically necessary for compatibility with the existing project.
+
+Testimonials Section
+
+The file:
+
+testomonial.txt
+
+contains the complete and specific instructions for the Testimonials section, including the selected testimonial component, animation, layout, styling, and required adaptations for Corn & Cheese Media.
+
+You MUST read testomonial.txt before implementing the Testimonials section.
+
+Treat the contents of testomonial.txt as the authoritative implementation specification for the Testimonials section.
+
+Do not use the demo content from the original component if testomonial.txt specifies different Corn & Cheese content.
+
+Implementation Priority
+
+Follow this priority when implementing the website:
+
+Existing project architecture and working code
+The overall website design/content requirements in this master prompt
+Section-specific instructions stored in:
+heroic.txt
+testomonial.txt
+Existing reusable components and design system
+Your own implementation decisions only where the above instructions do not specify something.
+Do NOT duplicate these instructions
+
+Do not recreate the Hero or Testimonials specifications from memory.
+
+Read the corresponding .txt file and implement directly from those instructions.
+
+The purpose of these files is to keep the website development modular and prevent the master prompt from becoming unnecessarily large.
+
+Important
+
+The website is being built incrementally.
+
+Do not assume that every section needs to be implemented using the same component style.
+
+Each section should feel like part of the same Corn & Cheese Media brand while still using the most appropriate component and interaction specified for that section.
+
+Now send me your overall/master website prompt.
+
+I'll integrate this file-reference instruction into it without changing your actual website requirements.
+
+You are given a task to integrate an existing React component in the codebase
+
+The codebase should support:
+
+shadcn project structure
+Tailwind CSS
+Typescript
+
+If it doesn't, provide instructions on how to setup project via shadcn CLI, install Tailwind or Typescript.
+
+Determine the default path for components and styles.
+If default path for components is not /components/ui, provide instructions on why it's important to create this folder
+Copy-paste this component to /components/ui folder:
+
+circular-testimonials.tsx
+"use client";
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  useMemo,
+  useCallback,
+} from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+
+interface Testimonial {
+  quote: string;
+  name: string;
+  designation: string;
+  src: string;
+}
+interface Colors {
+  name?: string;
+  designation?: string;
+  testimony?: string;
+  arrowBackground?: string;
+  arrowForeground?: string;
+  arrowHoverBackground?: string;
+}
+interface FontSizes {
+  name?: string;
+  designation?: string;
+  quote?: string;
+}
+interface CircularTestimonialsProps {
+  testimonials: Testimonial[];
+  autoplay?: boolean;
+  colors?: Colors;
+  fontSizes?: FontSizes;
+}
+
+function calculateGap(width: number) {
+  const minWidth = 1024;
+  const maxWidth = 1456;
+  const minGap = 60;
+  const maxGap = 86;
+  if (width <= minWidth) return minGap;
+  if (width >= maxWidth)
+    return Math.max(minGap, maxGap + 0.06018 * (width - maxWidth));
+  return minGap + (maxGap - minGap) * ((width - minWidth) / (maxWidth - minWidth));
+}
+
+export const CircularTestimonials = ({
+  testimonials,
+  autoplay = true,
+  colors = {},
+  fontSizes = {},
+}: CircularTestimonialsProps) => {
+  // Color & font config
+  const colorName = colors.name ?? "#000";
+  const colorDesignation = colors.designation ?? "#6b7280";
+  const colorTestimony = colors.testimony ?? "#4b5563";
+  const colorArrowBg = colors.arrowBackground ?? "#141414";
+  const colorArrowFg = colors.arrowForeground ?? "#f1f1f7";
+  const colorArrowHoverBg = colors.arrowHoverBackground ?? "#00a6fb";
+  const fontSizeName = fontSizes.name ?? "1.5rem";
+  const fontSizeDesignation = fontSizes.designation ?? "0.925rem";
+  const fontSizeQuote = fontSizes.quote ?? "1.125rem";
+
+  // State
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [hoverPrev, setHoverPrev] = useState(false);
+  const [hoverNext, setHoverNext] = useState(false);
+  const [containerWidth, setContainerWidth] = useState(1200);
+
+  const imageContainerRef = useRef<HTMLDivElement>(null);
+  const autoplayIntervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const testimonialsLength = useMemo(() => testimonials.length, [testimonials]);
+  const activeTestimonial = useMemo(
+    () => testimonials[activeIndex],
+    [activeIndex, testimonials]
+  );
+
+  // Responsive gap calculation
+  useEffect(() => {
+    function handleResize() {
+      if (imageContainerRef.current) {
+        setContainerWidth(imageContainerRef.current.offsetWidth);
+      }
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Autoplay
+  useEffect(() => {
+    if (autoplay) {
+      autoplayIntervalRef.current = setInterval(() => {
+        setActiveIndex((prev) => (prev + 1) % testimonialsLength);
+      }, 5000);
+    }
+    return () => {
+      if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
+    };
+  }, [autoplay, testimonialsLength]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "ArrowRight") handleNext();
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+    // eslint-disable-next-line
+  }, [activeIndex, testimonialsLength]);
+
+  // Navigation handlers
+  const handleNext = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % testimonialsLength);
+    if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
+  }, [testimonialsLength]);
+  const handlePrev = useCallback(() => {
+    setActiveIndex((prev) => (prev - 1 + testimonialsLength) % testimonialsLength);
+    if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
+  }, [testimonialsLength]);
+
+  // Compute transforms for each image (always show 3: left, center, right)
+  function getImageStyle(index: number): React.CSSProperties {
+    const gap = calculateGap(containerWidth);
+    const maxStickUp = gap * 0.8;
+    const offset = (index - activeIndex + testimonialsLength) % testimonialsLength;
+    // const zIndex = testimonialsLength - Math.abs(offset);
+    const isActive = index === activeIndex;
+    const isLeft = (activeIndex - 1 + testimonialsLength) % testimonialsLength === index;
+    const isRight = (activeIndex + 1) % testimonialsLength === index;
+    if (isActive) {
+      return {
+        zIndex: 3,
+        opacity: 1,
+        pointerEvents: "auto",
+        transform: `translateX(0px) translateY(0px) scale(1) rotateY(0deg)`,
+        transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+      };
+    }
+    if (isLeft) {
+      return {
+        zIndex: 2,
+        opacity: 1,
+        pointerEvents: "auto",
+        transform: `translateX(-${gap}px) translateY(-${maxStickUp}px) scale(0.85) rotateY(15deg)`,
+        transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+      };
+    }
+    if (isRight) {
+      return {
+        zIndex: 2,
+        opacity: 1,
+        pointerEvents: "auto",
+        transform: `translateX(${gap}px) translateY(-${maxStickUp}px) scale(0.85) rotateY(-15deg)`,
+        transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+      };
+    }
+    // Hide all other images
+    return {
+      zIndex: 1,
+      opacity: 0,
+      pointerEvents: "none",
+      transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+    };
+  }
+
+  // Framer Motion variants for quote
+  const quoteVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+  };
+
+  return (
+    <div className="testimonial-container">
+      <div className="testimonial-grid">
+        {/* Images */}
+        <div className="image-container" ref={imageContainerRef}>
+          {testimonials.map((testimonial, index) => (
+            <img
+              key={testimonial.src}
+              src={testimonial.src}
+              alt={testimonial.name}
+              className="testimonial-image"
+              data-index={index}
+              style={getImageStyle(index)}
+            />
+          ))}
+        </div>
+        {/* Content */}
+        <div className="testimonial-content">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIndex}
+              variants={quoteVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <h3
+                className="name"
+                style={{ color: colorName, fontSize: fontSizeName }}
+              >
+                {activeTestimonial.name}
+              </h3>
+              <p
+                className="designation"
+                style={{ color: colorDesignation, fontSize: fontSizeDesignation }}
+              >
+                {activeTestimonial.designation}
+              </p>
+              <motion.p
+                className="quote"
+                style={{ color: colorTestimony, fontSize: fontSizeQuote }}
+              >
+                {activeTestimonial.quote.split(" ").map((word, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{
+                      filter: "blur(10px)",
+                      opacity: 0,
+                      y: 5,
+                    }}
+                    animate={{
+                      filter: "blur(0px)",
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      duration: 0.22,
+                      ease: "easeInOut",
+                      delay: 0.025 * i,
+                    }}
+                    style={{ display: "inline-block" }}
+                  >
+                    {word}&nbsp;
+                  </motion.span>
+                ))}
+              </motion.p>
+            </motion.div>
+          </AnimatePresence>
+          <div className="arrow-buttons">
+            <button
+              className="arrow-button prev-button"
+              onClick={handlePrev}
+              style={{
+                backgroundColor: hoverPrev ? colorArrowHoverBg : colorArrowBg,
+              }}
+              onMouseEnter={() => setHoverPrev(true)}
+              onMouseLeave={() => setHoverPrev(false)}
+              aria-label="Previous testimonial"
+            >
+              <FaArrowLeft size={28} color={colorArrowFg} />
+            </button>
+            <button
+              className="arrow-button next-button"
+              onClick={handleNext}
+              style={{
+                backgroundColor: hoverNext ? colorArrowHoverBg : colorArrowBg,
+              }}
+              onMouseEnter={() => setHoverNext(true)}
+              onMouseLeave={() => setHoverNext(false)}
+              aria-label="Next testimonial"
+            >
+              <FaArrowRight size={28} color={colorArrowFg} />
+            </button>
+          </div>
+        </div>
+      </div>
+      <style jsx>{`
+        .testimonial-container {
+          width: 100%;
+          max-width: 56rem;
+          padding: 2rem;
+        }
+        .testimonial-grid {
+          display: grid;
+          gap: 5rem;
+        }
+        .image-container {
+          position: relative;
+          width: 100%;
+          height: 24rem;
+          perspective: 1000px;
+        }
+        .testimonial-image {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 1.5rem;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .testimonial-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .name {
+          font-weight: bold;
+          margin-bottom: 0.25rem;
+        }
+        .designation {
+          margin-bottom: 2rem;
+        }
+        .quote {
+          line-height: 1.75;
+        }
+        .arrow-buttons {
+          display: flex;
+          gap: 1.5rem;
+          padding-top: 3rem;
+        }
+        .arrow-button {
+          width: 2.7rem;
+          height: 2.7rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          border: none;
+        }
+        .word {
+          display: inline-block;
+        }
+        @media (min-width: 768px) {
+          .testimonial-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+          .arrow-buttons {
+            padding-top: 0;
+          }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default CircularTestimonials;
+
+demo.tsx
+import React from "react";
+import { CircularTestimonials } from '@/components/ui/circular-testimonials';
+
+const testimonials = [
+  {
+    quote:
+      "I was impressed by the food! And I could really tell that they use high-quality ingredients. The staff was friendly and attentive. I'll definitely be back for more!",
+    name: "Tamar Mendelson",
+    designation: "Restaurant Critic",
+    src:
+      "https://cdn.21st.dev/assets/mirror/02/0204be31ac91de05dc9a78ea3438dda481ff3deaaffa40cb28e3bc1822ba3650.jpg",
+  },
+  {
+    quote:
+      "This place exceeded all expectations! The atmosphere is inviting, and the staff truly goes above and beyond. I'll keep returning for more exceptional dining experience.",
+    name: "Joe Charlescraft",
+    designation: "Frequent Visitor",
+    src:
+      "https://cdn.21st.dev/assets/mirror/bb/bb5e69602eca31b29b15db66d5f95f5d6e1534037d1cc2c06e8cbb22cafb3a8f.jpg",
+  },
+  {
+    quote:
+      "Shining Yam is a hidden gem! The impeccable service and overall attention to detail created a memorable experience. I highly recommend it!",
+    name: "Martina Edelweist",
+    designation: "Satisfied Customer",
+    src:
+      "https://cdn.21st.dev/assets/mirror/b1/b1e3120d49307c1e99ec979e6d05e79f67d7ecea727b27eb716a2b7bff5fe0bb.jpg",
+  },
+];
+
+export const CircularTestimonialsDemo = () => (
+  <section>
+    {/* Light testimonials section */}
+    <div className="bg-[#f7f7fa] p-20 rounded-lg min-h-[300px] flex flex-wrap gap-6 items-center justify-center relative">
+      <div
+        className="items-center justify-center relative flex"
+        style={{ maxWidth: "1456px" }}
+      >
+        <CircularTestimonials
+          testimonials={testimonials}
+          autoplay={true}
+          colors={{
+            name: "#0a0a0a",
+            designation: "#454545",
+            testimony: "#171717",
+            arrowBackground: "#141414",
+            arrowForeground: "#f1f1f7",
+            arrowHoverBackground: "#00A6FB",
+          }}
+          fontSizes={{
+            name: "28px",
+            designation: "20px",
+            quote: "20px",
+          }}
+        />
+      </div>
+    </div>
+
+    {/* Dark testimonials section */}
+    <div className="bg-[#060507] p-16 rounded-lg min-h-[300px] flex flex-wrap gap-6 items-center justify-center relative">
+      <div
+        className="items-center justify-center relative flex"
+        style={{ maxWidth: "1024px" }}
+      >
+        <CircularTestimonials
+          testimonials={testimonials}
+          autoplay={true}
+          colors={{
+            name: "#f7f7ff",
+            designation: "#e1e1e1",
+            testimony: "#f1f1f7",
+            arrowBackground: "#0582CA",
+            arrowForeground: "#141414",
+            arrowHoverBackground: "#f7f7ff",
+          }}
+          fontSizes={{
+            name: "28px",
+            designation: "20px",
+            quote: "20px",
+          }}
+        />
+      </div>
+    </div>
+  </section>
+);
+
+
+
+Install NPM dependencies:
+
+react-icons, framer-motion
+
+Implementation Guidelines
+
+Analyze the component structure and identify all required dependencies
+Review the component's argumens and state
+Identify any required context providers or hooks and install them
+Questions to Ask
+What data/props will be passed to this component?
+Are there any specific state management requirements?
+Are there any required assets (images, icons, etc.)?
+What is the expected responsive behavior?
+What is the best place to use this component in the app?
+
+Steps to integrate
+0. Copy paste all the code above in the correct directories
+
+Install external dependencies
+Fill image assets with Unsplash stock images you know exist
+Use lucide-react icons for svgs or logos if component requires them
+Close

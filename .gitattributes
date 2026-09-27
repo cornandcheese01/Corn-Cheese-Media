@@ -1,0 +1,13 @@
+# Normalise line endings in the repo to LF so the project is identical on
+# Windows and on a Linux CI/host, and diffs stay clean across machines.
+* text=auto eol=lf
+
+# Binary assets must never be touched.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary
+*.woff  binary
+*.woff2 binary
