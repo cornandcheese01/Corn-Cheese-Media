@@ -4,3 +4,5 @@ out
 .env*.local
 *.tsbuildinfo
 next-env.d.ts
+*.bak.png
+public/mumbai_night_halftone_color.mp4

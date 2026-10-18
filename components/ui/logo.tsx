@@ -14,8 +14,8 @@ import { cn } from "@/lib/utils";
  */
 
 const SRC = {
-  dark: "/brand/logo-dark.png",
-  light: "/brand/logo-light.png",
+  dark: "/brand/logo-dark.png?v=2",
+  light: "/brand/logo-light.png?v=2",
 } as const;
 
 /** Intrinsic aspect of the supplied lockup. */

@@ -4,7 +4,6 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 
 import { GlassButton } from "@/components/ui/glass-button";
-import { HalftoneFlow } from "@/components/ui/halftone-flow";
 import { EASE } from "@/components/ui/reveal";
 import { hero, opening } from "@/content/site";
 
@@ -121,18 +120,21 @@ export function Hero() {
       data-dark-region
       className="relative flex min-h-[100svh] flex-col overflow-hidden bg-black"
     >
-      <HalftoneFlow
-        palette="brand"
-        speed={0.8}
-        dotSize={7}
-        brightness={0.82}
-        className="absolute inset-0 h-full w-full"
-      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/hero_video.mp4" type="video/mp4" />
+      </video>
+
 
       {/* Legibility scrim. Three quiet layers rather than one heavy one: a flat
           knock-down, a vignette that keeps the light weighted to the upper
           right, and a deep foot so the headline always sits on near-black. */}
-      <div aria-hidden="true" className="absolute inset-0 bg-black/45" />
+      <div aria-hidden="true" className="absolute inset-0 bg-black/10" />
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-[radial-gradient(115%_85%_at_78%_12%,transparent_0%,rgba(0,0,0,0.45)_55%,rgba(0,0,0,0.85)_100%)]"
@@ -232,11 +234,11 @@ export function Hero() {
               reduceMotion
                 ? { opacity: 0, transition: { duration: 0.4 } }
                 : {
-                    opacity: 0,
-                    filter: "blur(14px)",
-                    scale: 1.04,
-                    transition: { duration: 1.15, ease: EASE },
-                  }
+                  opacity: 0,
+                  filter: "blur(14px)",
+                  scale: 1.04,
+                  transition: { duration: 1.15, ease: EASE },
+                }
             }
           >
             <div className="shell">

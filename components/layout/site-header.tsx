@@ -95,7 +95,7 @@ export function SiteHeader() {
                   href={item.href}
                   data-cursor="link"
                   className={cn(
-                    "group relative font-display text-[0.78rem] font-bold italic uppercase tracking-[0.16em] transition-colors duration-400 ease-brand",
+                    "group relative font-display text-[0.78rem] uppercase tracking-[0.16em] transition-colors duration-400 ease-brand",
                     inverted
                       ? "text-white/80 hover:text-white"
                       : active

@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 import { GlassButton } from "@/components/ui/glass-button";
-import { HalftoneFlow } from "@/components/ui/halftone-flow";
 import { LogoMark } from "@/components/ui/logo";
 import { Reveal, RevealText } from "@/components/ui/reveal";
 import { closing } from "@/content/site";
@@ -37,7 +36,15 @@ export function ClosingCta() {
       className="relative overflow-hidden bg-black py-28 md:py-40 lg:py-48"
     >
       <motion.div style={{ y }} className="absolute inset-[-10%]">
-        <HalftoneFlow palette="brand" speed={0.7} dotSize={8} className="h-full w-full" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+        >
+          <source src="/mumbai_night_halftone.mp4" type="video/mp4" />
+        </video>
       </motion.div>
 
       <div

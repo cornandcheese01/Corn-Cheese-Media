@@ -36,7 +36,7 @@ export function SiteFooter() {
               <Logo variant="dark" height={30} />
             </Link>
             <p className="mt-6 max-w-sm font-body text-[1rem] text-grey">
-              A data plus advertising
+              A Data Plus Advertising Company.
             </p>
           </div>
 
