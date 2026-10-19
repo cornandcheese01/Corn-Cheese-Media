@@ -2,22 +2,20 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 import { EASE } from "@/components/ui/reveal";
 import { useReveal } from "@/components/ui/use-reveal";
 import { cn } from "@/lib/utils";
 
 /**
- * High-quality royalty-free (CC0/Unsplash) stock images representing each solution.
+ * A solution's parent category. Rows are listed under their category's title
+ * and introduction; a new group starts wherever `group.title` changes.
  */
-const SOLUTION_IMAGES: Record<number, string> = {
-  0: "/solutions/social-media.jpg",
-  1: "/solutions/influencer.jpg",
-  2: "/solutions/performance.jpg",
-  3: "/solutions/website.jpg",
-  4: "/solutions/manufacturing.jpg",
-  5: "/solutions/deep-tech.jpg",
+type Group = {
+  number: string;
+  title: string;
+  intro: string;
 };
 
 type Item = {
@@ -25,8 +23,12 @@ type Item = {
   title: string;
   line: string;
   href?: string;
+  /** The service's own photograph — never looked up by list position. */
   image?: string;
+  group?: Group;
 };
+
+const FALLBACK_IMAGE = "/solutions/default.jpg";
 
 export function SolutionsList({
   items,
@@ -72,10 +74,7 @@ export function SolutionsList({
 
   const activeIndex = hovered !== null ? hovered : scrolledIndex;
   const activeItem = items[activeIndex];
-  const activeImage =
-    activeItem?.image ||
-    SOLUTION_IMAGES[activeIndex % 6] ||
-    "/solutions/default.jpg";
+  const activeImage = activeItem?.image || FALLBACK_IMAGE;
 
   return (
     <div ref={ref} className={cn("grid gap-12 lg:grid-cols-12 lg:gap-16", className)}>
@@ -104,7 +103,7 @@ export function SolutionsList({
 
             <div className="absolute inset-0 z-10 flex flex-col justify-between p-8">
               <div className="flex items-center justify-between">
-                <span className="font-display text-[0.72rem] font-bold uppercase tracking-[0.2em] text-white/90">
+                <span className="font-display text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-white/90">
                   {activeItem?.number ? `Solution ${activeItem.number}` : "Solutions"}
                 </span>
                 <span className="rounded-full bg-white/20 px-2.5 py-0.5 font-display text-[0.68rem] font-semibold text-white backdrop-blur-md">
@@ -118,7 +117,12 @@ export function SolutionsList({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, ease: EASE }}
               >
-                <p className="font-display text-[1.65rem] font-bold leading-[1.12] tracking-tightest text-white">
+                {activeItem?.group && (
+                  <p className="mb-3 font-display text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-corn [text-shadow:0_1px_10px_rgba(0,0,0,0.75)]">
+                    {activeItem.group.title}
+                  </p>
+                )}
+                <p className="font-display text-[1.65rem] font-semibold leading-[1.12] tracking-tightest text-white">
                   {activeItem?.title ?? "One team for everything."}
                 </p>
                 {activeItem?.line && (
@@ -165,15 +169,15 @@ export function SolutionsList({
                 {item.number ?? String(i + 1).padStart(2, "0")}
               </span>
 
-              <h3
+              <h4
                 className={cn(
-                  "relative font-display font-bold tracking-tightest transition-[color,transform] duration-[650ms] ease-brand md:flex-1",
+                  "relative font-display font-semibold tracking-tightest transition-[color,transform] duration-[650ms] ease-brand md:flex-1",
                   "text-[clamp(1.6rem,3.4vw,2.9rem)] leading-[1.05]",
                   isActive ? "translate-x-1 text-ink md:translate-x-2" : "text-ink/80",
                 )}
               >
                 {item.title}
-              </h3>
+              </h4>
 
               <p
                 className={cn(
@@ -196,22 +200,43 @@ export function SolutionsList({
             </div>
           );
 
+          // A parent category's header sits above its first service.
+          const startsGroup = item.group && item.group.title !== items[i - 1]?.group?.title;
+
           return (
-            <motion.li
-              key={item.title}
-              className="border-t border-line last:border-b"
-              initial={{ opacity: 0, y: 22 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 22 }}
-              transition={{ duration: 0.7, ease: EASE, delay: i * 0.06 }}
-            >
-              {item.href ? (
-                <Link href={item.href} data-cursor="link" className="block">
-                  {Row}
-                </Link>
-              ) : (
-                Row
+            <Fragment key={item.title}>
+              {startsGroup && item.group && (
+                <motion.li
+                  className="pb-7 pt-16 first:pt-0"
+                  initial={{ opacity: 0, y: 22 }}
+                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 22 }}
+                  transition={{ duration: 0.7, ease: EASE, delay: i * 0.06 }}
+                >
+                  <p className="kicker">Category {item.group.number}</p>
+                  <h3 className="mt-3 font-display text-[clamp(1.35rem,2.2vw,1.85rem)] font-semibold leading-tight tracking-tightest text-ink">
+                    {item.group.title}
+                  </h3>
+                  <p className="mt-3 max-w-xl font-body text-[0.95rem] leading-relaxed text-grey">
+                    {item.group.intro}
+                  </p>
+                </motion.li>
               )}
-            </motion.li>
+
+              <motion.li
+                className="border-t border-line last:border-b"
+                initial={{ opacity: 0, y: 22 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 22 }}
+                transition={{ duration: 0.7, ease: EASE, delay: i * 0.06 }}
+              >
+                {item.href ? (
+                  <Link href={item.href} data-cursor="link" className="block">
+                    {Row}
+                  </Link>
+                ) : (
+                  Row
+                )}
+              </motion.li>
+            </Fragment>
           );
         })}
       </ul>

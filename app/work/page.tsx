@@ -27,7 +27,7 @@ export default function WorkPage() {
 
           <Reveal delay={0.1} className="mt-16 md:mt-20">
             <div className="flex flex-col items-start gap-7 md:flex-row md:items-center md:gap-10">
-              <p className="font-display text-[clamp(1.85rem,3.6vw,3rem)] font-bold leading-[1.05] tracking-tightest text-ink">
+              <p className="font-display text-[clamp(1.85rem,3.6vw,3rem)] font-semibold leading-[1.05] tracking-tightest text-ink">
                 {work.ctaLead}
               </p>
               <GlassButton href={work.cta.href}>{work.cta.label}</GlassButton>

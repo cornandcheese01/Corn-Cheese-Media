@@ -71,7 +71,7 @@ would break the content rules. See `content/testimonials.ts`:
 ### Copy not taken from the PDF
 
 Structural and navigational labels only — no claims: `Scroll`, `Navigate`,
-`Get in touch`, `Six solutions`, `Let's talk & data`, form field labels,
+`Get in touch`, `Category 01–03`, `Let's talk & data`, form field labels,
 validation messages and aria-labels. The footer tagline ("A data plus
 advertising") and the Founders Note (a teaser of the approved "A Note,
 Directly From Us" — see below) are the two content decisions made this
@@ -105,7 +105,7 @@ app/
                       07 work · 08 testimonials · 09 closing CTA
   what-we-do/         "We start with your consumer." + pinned 3-step process
   who-we-are/         "Why we're called Corn & Cheese Media."
-  solutions/          Six immersive alternating sections, one icon each
+  solutions/          Three parent categories → nine services (see below)
   work/               Client grid (logos only — no case studies)
   contact/            Details + premium form
 components/
@@ -150,6 +150,46 @@ missing animation — and IO has two failure modes that bite here: it is not
 delivered at all in some embedded/in-app browsers, and its intersection rect is
 clipped by ancestor `overflow`, which is exactly the shape of this site's
 masked-line reveal. One shared rAF loop that drains to empty avoids both.
+
+---
+
+## Solutions architecture
+
+Nine solutions in three parent categories. **`solutionCategories` in
+`content/site.ts` is the single source** — the Solutions page, the homepage
+index and the contact form's service options all derive from it, so the order,
+numbering (01–09, continuous across categories) and photographs can't drift
+apart.
+
+| Category | Services, in display order |
+| --- | --- |
+| 01 Growth & Marketing | 01 Social Media Optimization · 02 Performance Marketing · 03 Influencer Marketing |
+| 02 Industry Specializations | 04 Manufacturing Marketing · 05 Deep Tech Marketing · 06 Solar & Renewable Energy Marketing |
+| 03 Creative & Digital Solutions | 07 Video & Creative Production · 08 Website Development · 09 Marketing, PR & Digital |
+
+- **Solutions page**: a category jump menu under the headline; then for each
+  category a dark band (number, title, introduction, and an index linking down
+  to each of its services) followed by that category's three service sections.
+- **Homepage index**: the same nine in the same order, with each category's
+  title and introduction above its rows; the sticky photo card names the
+  category of whatever row is active.
+- **Photos belong to the service, not the list position.** Each solution
+  carries its own `image`. (The index used to pick photos by array position,
+  which would have attached the wrong photo to a service the moment the order
+  changed.)
+- The header now checks *every* `[data-dark-region]`, not just the first, so it
+  inverts correctly over all three category bands.
+
+**Content that needs your attention before publishing**
+
+- The approved PDF only contains six services. **Solar & Renewable Energy
+  Marketing, Video & Creative Production and Marketing, PR & Digital come from
+  the solutions-architecture brief** (full descriptions verbatim; the homepage
+  one-liners are condensed from them). Category titles and introductions are
+  also the brief's. Reconcile all of it with the content document.
+- The three new services have **no dedicated photograph** yet and use the
+  generic `/solutions/default.jpg`. Add a file to `public/solutions/` and set
+  `image` on that service in `content/site.ts` — one line each.
 
 ---
 

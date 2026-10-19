@@ -218,7 +218,7 @@ export function CircularTestimonials({
                   <span className="kicker">{String(index + 1).padStart(2, "0")}</span>
                   <span
                     aria-hidden="true"
-                    className="font-display text-[5.5rem] font-bold leading-none tracking-tightest text-brand/15"
+                    className="font-display text-[5.5rem] font-semibold leading-none tracking-tightest text-brand/15"
                   >
                     {initials(testimonial.name) || "CC"}
                   </span>
@@ -241,7 +241,7 @@ export function CircularTestimonials({
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <h3 className="font-display text-[1.5rem] font-bold tracking-tightest text-ink">
+              <h3 className="font-display text-[1.5rem] font-semibold tracking-tightest text-ink">
                 {active.name}
               </h3>
               <p className="mt-1 font-body text-[0.925rem] text-grey">

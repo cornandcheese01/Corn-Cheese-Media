@@ -5,7 +5,6 @@ import { SolutionsList } from "@/components/sections/solutions-list";
 import { Testimonials } from "@/components/sections/testimonials";
 import { WorkStrip } from "@/components/sections/work-grid";
 import { GlassButton } from "@/components/ui/glass-button";
-import { LogoMark } from "@/components/ui/logo";
 import { Reveal, RevealRule, RevealText } from "@/components/ui/reveal";
 import { Section, SectionHead } from "@/components/ui/section";
 import {
@@ -69,9 +68,6 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-col justify-end lg:col-span-6 lg:col-start-7">
-              <Reveal>
-                <LogoMark size={64} className="mb-10 opacity-80" />
-              </Reveal>
               <Reveal delay={0.1}>
                 <p className="font-display text-[clamp(1.35rem,2.4vw,2.1rem)] font-semibold leading-[1.25] tracking-tightest text-ink">
                   {whoWeAreTeaser.body}
@@ -99,12 +95,7 @@ export default function HomePage() {
           </SectionHead>
 
           <SolutionsList
-            items={solutionsTeaser.items.map((item, i) => ({
-              number: String(i + 1).padStart(2, "0"),
-              title: item.title,
-              line: item.line,
-              href: "/solutions",
-            }))}
+            items={solutionsTeaser.items.map((item) => ({ ...item, href: "/solutions" }))}
           />
 
           <Reveal delay={0.1} className="mt-16">

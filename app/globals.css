@@ -44,7 +44,7 @@
   }
 
   body {
-    @apply bg-white font-body text-ink;
+    @apply bg-white font-body font-medium text-ink;
     font-feature-settings: "kern" 1;
   }
 
@@ -84,13 +84,13 @@
      longest approved headline still sets on one line per break in a 7-column
      measure at desktop. */
   .display {
-    @apply font-display font-bold tracking-tightest;
+    @apply font-display font-semibold tracking-tightest;
     font-size: clamp(2.5rem, 6.3vw, 7.5rem);
     line-height: 0.94;
   }
 
   .display-sm {
-    @apply font-display font-bold tracking-tightest;
+    @apply font-display font-semibold tracking-tightest;
     font-size: clamp(2rem, 4.6vw, 4.25rem);
     line-height: 1;
   }

@@ -22,7 +22,7 @@ export default function WhatWeDoPage() {
         headline={"We start with\nyour consumer."}
         headlineLines={[
           "We start with",
-          highlightWord("your consumer.", "consumer", "text-cheese font-bold"),
+          highlightWord("your consumer.", "consumer", "text-cheese font-semibold"),
         ]}
         intro={whatWeDo.intro}
         visual={

@@ -5,13 +5,13 @@
  * the open web isn't something this build does for a client site (licensing,
  * "no random stock photos" per brief). These are original vector illustrations
  * instead — minimal single-weight line art on `currentColor`, so every motif
- * on the site shares one drawn hand and one accent colour rather than six
+ * on the site shares one drawn hand and one accent colour rather than nine
  * unrelated visual styles.
  *
  * Used for:
  *   - the faded "consumer" motif on What We Do
  *   - the faded "strategy" motif on Who We Are
- *   - the six Solutions-page category icons
+ *   - the nine Solutions-page icons, one per service
  */
 
 import { type SVGProps } from "react";
@@ -148,6 +148,40 @@ export function DeepTechIcon(props: MotifProps) {
       <circle cx="32" cy="50" r="2.4" fill="currentColor" />
       <circle cx="14" cy="32" r="2.4" fill="currentColor" />
       <circle cx="50" cy="32" r="2.4" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function SolarIcon(props: MotifProps) {
+  return (
+    <svg {...icon} {...props}>
+      <circle cx="20" cy="18" r="6" {...stroke} />
+      <path d="M20 9V6.5M20 27v2.5M11 18H8.5M29 18h2.5M13.6 11.6l-1.7-1.7M26.4 11.6l1.7-1.7M13.6 24.4l-1.7 1.7M26.4 24.4l1.7 1.7" {...stroke} strokeOpacity="0.55" />
+      <path d="M20 52l8-18h26l-8 18H20Z" {...stroke} />
+      <path d="M24 43h26M37 34l-8 18M45 34l-8 18" {...stroke} strokeOpacity="0.6" />
+      <path d="M33 52v6M27 58h12" {...stroke} strokeOpacity="0.6" />
+    </svg>
+  );
+}
+
+export function VideoIcon(props: MotifProps) {
+  return (
+    <svg {...icon} {...props}>
+      <rect x="10" y="18" width="34" height="28" rx="3" {...stroke} />
+      <path d="M44 29.5l10-6.5v18l-10-6.5" {...stroke} />
+      <path d="M24.5 27v10l8.5-5Z" {...stroke} />
+      <circle cx="16" cy="24" r="1.2" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function PRDigitalIcon(props: MotifProps) {
+  return (
+    <svg {...icon} {...props}>
+      <path d="M14 28v8h8l16 10V18L22 28h-8Z" {...stroke} />
+      <path d="M20 36l2.5 9h5l-1.5-6.5" {...stroke} strokeOpacity="0.6" />
+      <path d="M44 26c2.5 3.5 2.5 8.5 0 12" {...stroke} />
+      <path d="M49 21c5 6.5 5 15.5 0 22" {...stroke} strokeOpacity="0.55" />
     </svg>
   );
 }

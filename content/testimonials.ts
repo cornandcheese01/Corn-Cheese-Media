@@ -33,7 +33,7 @@ export type Testimonial = {
 
 export const testimonialsSection = {
   kicker: "Testimonials",
-  headline: "Let's talk & data",
+  headline: "",
 } as const;
 
 export const testimonials: Testimonial[] = [
@@ -49,13 +49,14 @@ export const testimonials: Testimonial[] = [
       "Had them promote our fest sponsorship and turnout was honestly better than last year when we did it ourselves. would recommend to anyone running an event",
     name: "Imran Sheikh",
     designation: "Founder",
-    src: "/testimonials/testimonial_2.jpg",
+    src: "/testimonials/testimonial_2.png",
   },
   {
     quote:
       "we did an influencer thing with them for diwali and i was nervous it’d feel fake/sponsored. it didn’t. people actually commented asking where to buy",
     name: "Anushka Maheshwari",
     designation: "Brand Manager",
-    src: "/testimonials/testimonial_3.jpg",
+
+    src: "/testimonials/testimonial_3.png",
   },
 ];

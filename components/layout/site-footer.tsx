@@ -33,10 +33,10 @@ export function SiteFooter() {
         <div className="grid gap-12 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-5">
             <Link href="/" aria-label="Corn & Cheese Media — home" data-cursor="link" className="inline-block">
-              <Logo variant="dark" height={30} />
+              <Logo variant="dark" height={42} />
             </Link>
             <p className="mt-6 max-w-sm font-body text-[1rem] text-grey">
-              A Data Plus Advertising Company.
+              A Data + Advertising Company.
             </p>
           </div>
 

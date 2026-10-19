@@ -27,11 +27,16 @@ export function SiteHeader() {
   useEffect(() => {
     const update = () => {
       setScrolled(window.scrollY > 24);
-      // Pages opt into the inverted header by marking a region [data-dark-region].
-      const dark = document.querySelector<HTMLElement>("[data-dark-region]");
-      if (!dark) return setOverDark(false);
-      const rect = dark.getBoundingClientRect();
-      setOverDark(rect.top <= 40 && rect.bottom > 76);
+      // Pages opt into the inverted header by marking regions [data-dark-region].
+      // Check every one — a page can have several (the Solutions page has a dark
+      // band per category plus the closing CTA), and the header is over a dark
+      // region if it overlaps any of them.
+      let over = false;
+      document.querySelectorAll<HTMLElement>("[data-dark-region]").forEach((region) => {
+        const rect = region.getBoundingClientRect();
+        if (rect.top <= 40 && rect.bottom > 76) over = true;
+      });
+      setOverDark(over);
     };
 
     update();
@@ -73,7 +78,7 @@ export function SiteHeader() {
             className="relative -ml-1 flex items-center py-2"
           >
             <span className={cn("transition-opacity duration-500", inverted ? "opacity-0" : "opacity-100")}>
-              <Logo variant="dark" height={26} priority />
+              <Logo variant="dark" height={50} priority />
             </span>
             <span
               aria-hidden="true"
@@ -82,7 +87,7 @@ export function SiteHeader() {
                 inverted ? "opacity-100" : "opacity-0",
               )}
             >
-              <Logo variant="light" height={26} />
+              <Logo variant="light" height={50} />
             </span>
           </Link>
 
@@ -95,7 +100,7 @@ export function SiteHeader() {
                   href={item.href}
                   data-cursor="link"
                   className={cn(
-                    "group relative font-display text-[0.78rem] font-bold uppercase tracking-[0.16em] transition-colors duration-400 ease-brand",
+                    "group relative font-display text-[0.78rem] font-semibold uppercase tracking-[0.16em] transition-colors duration-400 ease-brand",
                     inverted
                       ? "text-white/80 hover:text-white"
                       : active
@@ -172,7 +177,7 @@ export function SiteHeader() {
                   >
                     <Link
                       href={item.href}
-                      className="block py-6 font-display text-[2.25rem] font-bold leading-none tracking-tightest text-ink"
+                      className="block py-6 font-display text-[2.25rem] font-semibold leading-none tracking-tightest text-ink"
                     >
                       {item.label}
                     </Link>

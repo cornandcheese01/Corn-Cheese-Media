@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 import { GlassButton } from "@/components/ui/glass-button";
@@ -241,7 +242,54 @@ export function Hero() {
                 }
             }
           >
-            <div className="shell">
+            {/* Portrait: a large crop blended into the black with soft gradients on
+                its left, top and bottom edges, so it reads as part of the
+                background rather than a picture placed on it. Behind the quote
+                on small screens (dimmed); beside it from md up. */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute bottom-0 right-0 h-[58%] w-[92%] opacity-40 md:top-[12%] md:h-auto md:w-[38vw] md:max-w-[760px] md:opacity-100"
+            >
+              <motion.div
+                className="relative h-full w-full"
+                style={{ transformOrigin: "right center" }}
+                initial={reduceMotion ? { opacity: 0 } : { opacity: 0, x: 56, scale: 1.08 }}
+                animate={
+                  quoteIn
+                    ? reduceMotion
+                      ? { opacity: 1 }
+                      : { opacity: 1, x: 0, scale: 1 }
+                    : reduceMotion
+                      ? { opacity: 0 }
+                      : { opacity: 0, x: 56, scale: 1.08 }
+                }
+                transition={{ duration: reduceMotion ? 0.6 : 1.5, ease: EASE, delay: reduceMotion ? 0 : 0.1 }}
+              >
+                <Image
+                  src="/David_Ogilvy.jpg"
+                  alt="David Ogilvy"
+                  fill
+                  priority
+                  sizes="(min-width: 768px) 38vw, 92vw"
+                  className="object-cover grayscale contrast-[1.06] brightness-[0.82]"
+                  style={{ objectPosition: "46% 8%" }}
+                />
+                <div className="absolute inset-y-0 left-0 w-[75%] bg-[linear-gradient(to_right,#050505_0%,rgba(5,5,5,0.94)_14%,rgba(5,5,5,0.7)_32%,rgba(5,5,5,0.32)_55%,rgba(5,5,5,0.08)_78%,transparent_100%)]" />
+                <div className="absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
+                <div className="absolute inset-x-0 top-0 h-[22%] bg-gradient-to-b from-[#050505] to-transparent" />
+              </motion.div>
+
+              <motion.p
+                className="absolute bottom-10 right-[var(--gutter)] hidden text-right font-display text-[0.6rem] font-medium uppercase leading-relaxed tracking-[0.32em] text-white/35 md:block"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: quoteIn ? 1 : 0 }}
+                transition={{ duration: 1, ease: EASE, delay: reduceMotion ? 0 : 1.2 }}
+              >
+                Advertising legend
+              </motion.p>
+            </div>
+
+            <div className="shell relative z-10">
               <blockquote className="max-w-6xl">
                 <p className="font-display text-[clamp(1.45rem,3.5vw,3.1rem)] font-semibold leading-[1.2] tracking-tightest text-white">
                   {QUOTE_LINES.map((line, i) => (

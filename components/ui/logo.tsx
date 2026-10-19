@@ -14,12 +14,12 @@ import { cn } from "@/lib/utils";
  */
 
 const SRC = {
-  dark: "/brand/logo-dark.png?v=2",
-  light: "/brand/logo-light.png?v=2",
+  dark: "/brand/logo-dark.png?v=4",
+  light: "/brand/logo-light.png?v=4",
 } as const;
 
 /** Intrinsic aspect of the supplied lockup. */
-const RATIO = 1400 / 399;
+const RATIO = 1478 / 465;
 
 export function Logo({
   variant = "dark",
@@ -58,10 +58,10 @@ export function LogoMark({
 }) {
   return (
     <Image
-      src="/brand/mark.png"
+      src="/brand/mark.png?v=4"
       alt=""
       aria-hidden="true"
-      width={Math.round(size * (322 / 404))}
+      width={Math.round(size * (359 / 453))}
       height={size}
       className={cn("select-none", className)}
       style={{ height: size, width: "auto", ...style }}
