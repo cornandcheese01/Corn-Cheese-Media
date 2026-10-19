@@ -39,26 +39,23 @@ export const testimonialsSection = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Approved testimonial copy pending. This placeholder holds the layout, the word by word reveal and the circular arrangement so the section can be reviewed before the real quotes are signed off.",
-    name: "Client Name",
-    designation: "Role, Company",
-    src: null,
-    placeholder: true,
+      "Got our website + ad creatives done together which saved us so much back and forth between different people. just easier",
+    name: "Kavya Iyer",
+    designation: "Director",
+    src: "/testimonials/testimonial_1.png",
   },
   {
     quote:
-      "Approved testimonial copy pending. Replace this entry in content/testimonials.ts with the real quote, name, designation and photograph.",
-    name: "Client Name",
-    designation: "Role, Company",
-    src: null,
-    placeholder: true,
+      "Had them promote our fest sponsorship and turnout was honestly better than last year when we did it ourselves. would recommend to anyone running an event",
+    name: "Imran Sheikh",
+    designation: "Founder",
+    src: "/testimonials/testimonial_2.jpg",
   },
   {
     quote:
-      "Approved testimonial copy pending. The component supports any number of testimonials; three keeps the left, centre and right plates all filled.",
-    name: "Client Name",
-    designation: "Role, Company",
-    src: null,
-    placeholder: true,
+      "we did an influencer thing with them for diwali and i was nervous it’d feel fake/sponsored. it didn’t. people actually commented asking where to buy",
+    name: "Anushka Maheshwari",
+    designation: "Brand Manager",
+    src: "/testimonials/testimonial_3.jpg",
   },
 ];

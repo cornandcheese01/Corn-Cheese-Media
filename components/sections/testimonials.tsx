@@ -19,6 +19,7 @@ import {
  * Renders nothing while `testimonialsEnabled` is false — see
  * content/testimonials.ts for the content status.
  */
+
 export function Testimonials() {
   if (!testimonialsEnabled || testimonials.length === 0) return null;
 

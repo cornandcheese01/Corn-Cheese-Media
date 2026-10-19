@@ -95,7 +95,7 @@ export function SiteHeader() {
                   href={item.href}
                   data-cursor="link"
                   className={cn(
-                    "group relative font-display text-[0.78rem] uppercase tracking-[0.16em] transition-colors duration-400 ease-brand",
+                    "group relative font-display text-[0.78rem] font-bold uppercase tracking-[0.16em] transition-colors duration-400 ease-brand",
                     inverted
                       ? "text-white/80 hover:text-white"
                       : active
@@ -172,7 +172,7 @@ export function SiteHeader() {
                   >
                     <Link
                       href={item.href}
-                      className="block py-6 font-display text-[2.25rem] font-bold italic leading-none tracking-tightest text-ink"
+                      className="block py-6 font-display text-[2.25rem] font-bold leading-none tracking-tightest text-ink"
                     >
                       {item.label}
                     </Link>

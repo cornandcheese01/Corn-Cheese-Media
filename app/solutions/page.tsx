@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { type ComponentType } from "react";
 
 import { GlassButton } from "@/components/ui/glass-button";
-import { HalftoneFlow } from "@/components/ui/halftone-flow";
 import {
   DeepTechIcon,
   InfluencerIcon,
@@ -16,6 +15,15 @@ import { Reveal, RevealMedia, RevealText } from "@/components/ui/reveal";
 import { Section } from "@/components/ui/section";
 import { solutions } from "@/content/site";
 import { cn } from "@/lib/utils";
+
+const SOLUTION_IMAGE_MAP: Record<string, string> = {
+  "social-media-optimization": "/solutions/social-media.jpg",
+  "influencer-marketing": "/solutions/influencer.jpg",
+  "performance-marketing": "/solutions/performance.jpg",
+  "website-development": "/solutions/website.jpg",
+  "manufacturing-marketing": "/solutions/manufacturing.jpg",
+  "deep-tech-marketing": "/solutions/deep-tech.jpg",
+};
 
 export const metadata: Metadata = {
   title: "Solutions",
@@ -87,28 +95,26 @@ export default function SolutionsPage() {
                       flipped ? "lg:order-1 lg:col-start-1" : "lg:order-2 lg:col-start-8",
                     )}
                   >
-                    <RevealMedia className="rounded-[2px] border border-line">
-                      <div className="relative aspect-[4/3] w-full overflow-hidden bg-white lg:aspect-square">
-                        <HalftoneFlow
-                          mode="light"
-                          palette="brand"
-                          speed={0.45 + i * 0.06}
-                          dotSize={8 + i}
-                          className="absolute inset-0 h-full w-full transition-transform duration-[900ms] ease-brand group-hover/solution:scale-[1.04]"
+                    <RevealMedia className="rounded-[4px] border border-line shadow-lg">
+                      <div className="relative aspect-[4/3] w-full overflow-hidden bg-ink lg:aspect-square">
+                        <img
+                          src={SOLUTION_IMAGE_MAP[solution.slug] || "/solutions/default.jpg"}
+                          alt={solution.title}
+                          className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-brand group-hover/solution:scale-[1.05]"
                         />
                         <div
                           aria-hidden="true"
-                          className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/85 to-transparent"
+                          className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20"
                         />
                         {Icon ? (
-                          <div className="absolute inset-0 flex items-center justify-center transition-transform duration-[900ms] ease-brand group-hover/solution:scale-[1.04]">
-                            <div className="flex h-28 w-28 items-center justify-center rounded-full border border-brand/15 bg-white/80 shadow-[0_18px_40px_-16px_rgba(10,10,10,0.2)] backdrop-blur-sm md:h-32 md:w-32">
-                              <Icon className="h-14 w-14 text-brand md:h-16 md:w-16" />
+                          <div className="absolute inset-0 flex items-center justify-center transition-transform duration-[900ms] ease-brand group-hover/solution:scale-[1.05]">
+                            <div className="flex h-24 w-24 items-center justify-center rounded-full border border-white/20 bg-black/40 shadow-xl backdrop-blur-md md:h-28 md:w-28">
+                              <Icon className="h-12 w-12 text-white md:h-14 md:w-14" />
                             </div>
                           </div>
                         ) : null}
                         <div className="absolute inset-0 flex items-end p-7">
-                          <span className="kicker">{solution.title}</span>
+                          <span className="kicker text-white/90">{solution.title}</span>
                         </div>
                       </div>
                     </RevealMedia>
