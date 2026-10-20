@@ -18,6 +18,9 @@ type Group = {
   intro: string;
   /** The category's own colour, from the logo's blues. */
   accent: string;
+  /** Band gradient, same as the Solutions page. */
+  from: string;
+  to: string;
 };
 
 type Item = {
@@ -157,16 +160,18 @@ export function SolutionsList({
               <span
                 aria-hidden="true"
                 className={cn(
-                  "pointer-events-none absolute inset-y-0 -left-4 -right-4 origin-left bg-brand-soft/70 transition-transform duration-[650ms] ease-brand md:-left-6 md:-right-6",
-                  isHovered ? "scale-x-100 opacity-100" : isActive ? "scale-x-100 opacity-40" : "scale-x-0 opacity-0",
+                  "pointer-events-none absolute inset-y-0 -left-4 -right-4 origin-left transition-transform duration-[650ms] ease-brand md:-left-6 md:-right-6",
+                  isHovered ? "scale-x-100 opacity-100" : isActive ? "scale-x-100 opacity-50" : "scale-x-0 opacity-0",
                 )}
+                style={{ background: item.group ? `${item.group.accent}1F` : "#EAF2FF" }}
               />
 
               <span
                 className={cn(
                   "relative font-display text-[0.75rem] font-semibold tracking-[0.18em] transition-colors duration-500 ease-brand md:w-16 md:shrink-0",
-                  isActive ? "text-brand" : "text-grey",
+                  isActive ? (item.group ? "" : "text-brand") : "text-grey",
                 )}
+                style={isActive && item.group ? { color: item.group.accent } : undefined}
               >
                 {item.number ?? String(i + 1).padStart(2, "0")}
               </span>
@@ -194,8 +199,9 @@ export function SolutionsList({
                 aria-hidden="true"
                 className={cn(
                   "relative hidden font-display text-lg transition-[opacity,transform] duration-[650ms] ease-brand md:block",
-                  isActive ? "translate-x-0 opacity-100 text-brand" : "-translate-x-2 opacity-0",
+                  isActive ? (item.group ? "translate-x-0 opacity-100" : "translate-x-0 opacity-100 text-brand") : "-translate-x-2 opacity-0",
                 )}
+                style={isActive && item.group ? { color: item.group.accent } : undefined}
               >
                 &rarr;
               </span>
@@ -209,23 +215,26 @@ export function SolutionsList({
             <Fragment key={item.title}>
               {startsGroup && item.group && (
                 <motion.li
-                  className="pb-7 pt-16 first:pt-0"
+                  className="pb-5 pt-12 first:pt-0"
                   initial={{ opacity: 0, y: 22 }}
                   animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 22 }}
                   transition={{ duration: 0.7, ease: EASE, delay: i * 0.06 }}
                 >
-                  <span
-                    aria-hidden="true"
-                    className="mb-4 block h-[3px] w-10"
-                    style={{ background: item.group.accent }}
-                  />
-                  <p className="kicker !text-cheese">Category {item.group.number}</p>
-                  <h3 className="mt-3 font-display text-[clamp(1.35rem,2.2vw,1.85rem)] font-semibold leading-tight tracking-tightest text-ink">
-                    {item.group.title}
-                  </h3>
-                  <p className="mt-3 max-w-xl font-body text-[0.95rem] leading-relaxed text-grey">
-                    {item.group.intro}
-                  </p>
+                  {/* Same colour as this category's band on the Solutions page. */}
+                  <div
+                    className="rounded-[4px] px-6 py-7 md:px-8 md:py-8"
+                    style={{
+                      background: `linear-gradient(135deg, ${item.group.from} 0%, ${item.group.to} 100%)`,
+                    }}
+                  >
+                    <p className="kicker !text-white/75">Category {item.group.number}</p>
+                    <h3 className="mt-3 font-display text-[clamp(1.35rem,2.2vw,1.85rem)] font-semibold leading-tight tracking-tightest text-white">
+                      {item.group.title}
+                    </h3>
+                    <p className="mt-3 max-w-xl font-body text-[0.95rem] leading-relaxed text-white/85">
+                      {item.group.intro}
+                    </p>
+                  </div>
                 </motion.li>
               )}
 

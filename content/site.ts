@@ -239,6 +239,8 @@ export const solutionsTeaser = {
         title: category.title,
         intro: category.intro,
         accent: category.theme.accent,
+        from: category.theme.from,
+        to: category.theme.to,
       },
     })),
   ),
