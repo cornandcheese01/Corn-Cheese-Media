@@ -14,10 +14,10 @@ import { foundersNote, whoWeAre } from "@/content/site";
  */
 export function FoundersNote() {
   return (
-    <Section tone="offwhite" className="relative overflow-hidden">
+    <Section tone="blue" className="relative overflow-hidden">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-16 -top-16 hidden opacity-[0.05] lg:block"
+        className="pointer-events-none absolute -left-16 -top-16 hidden opacity-[0.16] lg:block"
       >
         <LogoMark size={280} />
       </div>
@@ -25,25 +25,25 @@ export function FoundersNote() {
       <div className="shell relative">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal amount={0.1}>
-            <span className="kicker">{foundersNote.kicker}</span>
+            <span className="kicker !text-white/75">{foundersNote.kicker}</span>
           </Reveal>
 
           <Reveal delay={0.1} amount={0.1} className="mt-9">
-            <p className="font-display text-[clamp(1.5rem,3.1vw,2.5rem)] font-semibold leading-[1.35] tracking-tightest text-ink">
+            <p className="font-display text-[clamp(1.5rem,3.1vw,2.5rem)] font-semibold leading-[1.35] tracking-tightest text-white">
               {foundersNote.body}
             </p>
           </Reveal>
 
           <Reveal delay={0.2} amount={0.1} className="mt-10 flex flex-col items-center gap-6">
-            <RevealRule className="max-w-[3rem]" />
-            <p className="kicker text-ink">{whoWeAre.signature}</p>
+            <RevealRule className="max-w-[3rem] bg-white/50" />
+            <p className="kicker !text-white">{whoWeAre.signature}</p>
           </Reveal>
 
           <Reveal delay={0.28} amount={0.1} className="mt-10">
             <Link
               href={foundersNote.cta.href}
               data-cursor="link"
-              className="group relative inline-flex items-center gap-2 font-display text-[0.8125rem] font-semibold uppercase tracking-[0.14em] text-ink transition-colors duration-400 ease-brand hover:text-brand"
+              className="group relative inline-flex items-center gap-2 font-display text-[0.8125rem] font-semibold uppercase tracking-[0.14em] text-white transition-colors duration-400 ease-brand hover:text-white/70"
             >
               {foundersNote.cta.label}
               <span

@@ -19,6 +19,7 @@ export default function WhoWeArePage() {
       <PageHero
         eyebrow={whoWeAre.eyebrow}
         headline={"Why we're called\nCorn & Cheese\nMedia."}
+        tint
         visual={
           <StrategyMotif className="h-auto w-full max-w-md text-ink opacity-[0.07]" />
         }
@@ -69,8 +70,8 @@ export default function WhoWeArePage() {
         </div>
       </Section>
 
-      {/* A Note, Directly From Us */}
-      <Section>
+      {/* A Note, Directly From Us - the page's blue band */}
+      <Section tone="blue">
         <div className="shell">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
@@ -78,7 +79,7 @@ export default function WhoWeArePage() {
                 <RevealText
                   text={"A Note,\nDirectly\nFrom Us"}
                   as="h2"
-                  className="display-sm"
+                  className="display-sm text-white"
                 />
               </div>
             </div>
@@ -86,19 +87,19 @@ export default function WhoWeArePage() {
             <div className="lg:col-span-7 lg:col-start-6">
               {whoWeAre.note.map((paragraph, i) => (
                 <Reveal key={i} delay={i * 0.08} className="mb-8 last:mb-0">
-                  <p className="lede text-[1.125rem] text-ink/80 md:text-[1.3rem]">
+                  <p className="lede text-[1.125rem] text-white/90 md:text-[1.3rem]">
                     {paragraph}
                   </p>
                 </Reveal>
               ))}
 
               <Reveal delay={0.3} className="mt-14">
-                <RevealRule className="mb-7" />
-                <p className="kicker text-ink">{whoWeAre.signature}</p>
+                <RevealRule className="mb-7 bg-white/40" />
+                <p className="kicker !text-white">{whoWeAre.signature}</p>
               </Reveal>
 
               <Reveal delay={0.36} className="mt-12">
-                <GlassButton href={site.cta.href}>{site.cta.label}</GlassButton>
+                <GlassButton href={site.cta.href} tone="onDark">{site.cta.label}</GlassButton>
               </Reveal>
             </div>
           </div>

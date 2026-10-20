@@ -24,7 +24,7 @@ export function Testimonials() {
   if (!testimonialsEnabled || testimonials.length === 0) return null;
 
   return (
-    <Section tone="white">
+    <Section tone="tint">
       <div className="shell">
         <SectionHead kicker={testimonialsSection.kicker}>
           <RevealText

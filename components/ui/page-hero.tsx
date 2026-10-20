@@ -21,6 +21,7 @@ export function PageHero({
   headlineLines,
   intro,
   visual,
+  tint = false,
   children,
   className,
 }: {
@@ -30,6 +31,8 @@ export function PageHero({
   headlineLines?: ReactNode[];
   intro?: string;
   visual?: ReactNode;
+  /** A faint light-blue glow in the top-right corner. Off by default. */
+  tint?: boolean;
   children?: ReactNode;
   className?: string;
 }) {
@@ -60,7 +63,13 @@ export function PageHero({
   );
 
   return (
-    <section className={cn("bg-white pb-16 pt-[132px] md:pb-24 md:pt-[184px]", className)}>
+    <section
+      className={cn(
+        "bg-white pb-16 pt-[132px] md:pb-24 md:pt-[184px]",
+        tint && "bg-[radial-gradient(75%_95%_at_100%_0%,#DCEAFF_0%,rgba(234,242,255,0.55)_38%,rgba(255,255,255,0)_72%)]",
+        className,
+      )}
+    >
       <div className="shell">
         {visual ? (
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">

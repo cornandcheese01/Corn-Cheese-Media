@@ -154,7 +154,7 @@ export function ProcessStory({ steps }: { steps: readonly Step[] }) {
                 key={step.number}
                 className={cn(
                   "h-px flex-1 transition-colors duration-500 ease-brand",
-                  i <= active ? "bg-brand" : "bg-line",
+                  i <= active ? "bg-brand" : "bg-brand/20",
                 )}
               />
             ))}
@@ -170,7 +170,7 @@ export function ProcessStory({ steps }: { steps: readonly Step[] }) {
             ref={(el) => {
               stepRefs.current[i] = el;
             }}
-            className="border-t border-line py-12 first:border-t-0 first:pt-0 md:py-16 lg:min-h-[62vh] lg:py-20"
+            className="border-t border-brand/15 py-12 first:border-t-0 first:pt-0 md:py-16 lg:min-h-[62vh] lg:py-20"
             initial={{ opacity: 0, y: 28 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
             transition={{ duration: 0.8, ease: EASE, delay: i * 0.08 }}

@@ -25,13 +25,14 @@ export default function WhatWeDoPage() {
           highlightWord("your consumer.", "consumer", "text-cheese font-semibold"),
         ]}
         intro={whatWeDo.intro}
+        tint
         visual={
           <ConsumerMotif className="h-auto w-full max-w-md text-ink opacity-[0.07]" />
         }
       />
 
       {/* Our Process — pinned storytelling, not cards. */}
-      <Section tone="offwhite">
+      <Section tone="tint">
         <div className="shell">
           <SectionHead className="mb-16 md:mb-20">
             <RevealText
@@ -45,23 +46,23 @@ export default function WhatWeDoPage() {
         </div>
       </Section>
 
-      {/* What This Looks Like In Practice */}
-      <Section>
+      {/* What This Looks Like In Practice - the page's blue band */}
+      <Section tone="blue">
         <div className="shell">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
               <RevealText
                 text={"What This Looks\nLike In Practice"}
                 as="h2"
-                className="display-sm"
+                className="display-sm text-white"
               />
             </div>
             <div className="lg:col-span-6 lg:pt-3">
               <Reveal delay={0.1}>
-                <p className="lede">{whatWeDo.practiceBody}</p>
+                <p className="lede text-white/85">{whatWeDo.practiceBody}</p>
               </Reveal>
               <Reveal delay={0.2} className="mt-10">
-                <GlassButton href={whatWeDo.cta.href}>
+                <GlassButton href={whatWeDo.cta.href} tone="onDark">
                   {whatWeDo.cta.label}
                 </GlassButton>
               </Reveal>

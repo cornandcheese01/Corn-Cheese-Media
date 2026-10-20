@@ -30,6 +30,7 @@ export default function ContactPage() {
         eyebrow={contactPage.eyebrow}
         headline={"Let's talk\nabout your brand."}
         intro={contactPage.body}
+        tint
       />
 
       <Section className="pt-0 md:pt-0 lg:pt-0">
@@ -37,20 +38,19 @@ export default function ContactPage() {
           <div className="grid gap-16 lg:grid-cols-12 lg:gap-16">
             {/* Details */}
             <aside className="lg:col-span-4">
-              <div className="lg:sticky lg:top-32">
-                <RevealRule className="mb-10" />
+              <div className="rounded-[4px] bg-[linear-gradient(135deg,#1670F0_0%,#0B4FCC_100%)] p-8 shadow-[0_24px_50px_-24px_rgba(11,79,204,0.55)] md:p-10 lg:sticky lg:top-32">
                 <dl className="space-y-8">
                   {details.map((detail, i) => (
                     <Reveal key={detail.label} delay={i * 0.07} amount={0.1}>
-                      <dt className="kicker mb-2">{detail.label}</dt>
-                      <dd className="font-display text-[1.0625rem] font-semibold tracking-tight text-ink">
+                      <dt className="kicker mb-2 !text-white/70">{detail.label}</dt>
+                      <dd className="font-display text-[1.0625rem] font-semibold tracking-tight text-white">
                         {detail.href ? (
                           <a
                             href={detail.href}
                             data-cursor="link"
                             target={detail.external ? "_blank" : undefined}
                             rel={detail.external ? "noopener noreferrer" : undefined}
-                            className="relative inline-block transition-colors duration-400 ease-brand hover:text-brand"
+                            className="relative inline-block transition-colors duration-400 ease-brand hover:text-white/70"
                           >
                             {detail.value}
                           </a>

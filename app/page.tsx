@@ -7,6 +7,7 @@ import { WorkStrip } from "@/components/sections/work-grid";
 import { GlassButton } from "@/components/ui/glass-button";
 import { Reveal, RevealRule, RevealText } from "@/components/ui/reveal";
 import { Section, SectionHead } from "@/components/ui/section";
+import { highlightWord } from "@/lib/highlight-word";
 import {
   solutionsTeaser,
   whatWeDoTeaser,
@@ -35,6 +36,11 @@ export default function HomePage() {
                   text={"We look at data\nbefore we look\nfor ideas."}
                   as="h2"
                   className="display"
+                  lines={[
+                    highlightWord("We look at data", "data", "text-brand"),
+                    "before we look",
+                    "for ideas.",
+                  ]}
                 />
               </SectionHead>
             </div>
@@ -54,7 +60,7 @@ export default function HomePage() {
       </Section>
 
       {/* 04 — WHO WE ARE -------------------------------------------- */}
-      <Section tone="offwhite">
+      <Section tone="tint">
         <div className="shell">
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
