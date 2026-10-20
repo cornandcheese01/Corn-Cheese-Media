@@ -162,11 +162,12 @@ function CategoryNav() {
   return (
     <Reveal delay={0.3} amount={0.05} className="mt-14 md:mt-20">
       <nav aria-label="Solution categories">
-        <ol className="grid border-t border-line md:grid-cols-3">
+        <ol className="grid md:grid-cols-3">
           {solutions.categories.map((category) => (
             <li
               key={category.slug}
-              className="border-b border-line md:border-b-0 md:border-r md:last:border-r-0"
+              className="border-b border-t-[3px] border-line md:border-b-0 md:border-r md:last:border-r-0"
+              style={{ borderTopColor: category.theme.accent }}
             >
               <a
                 href={`#${category.slug}`}
@@ -201,20 +202,28 @@ function CategoryNav() {
 
 /**
  * The parent category: number, title and introduction, with its services
- * listed as an index that links down to each one. A dark band, like the page's
- * closing CTA, so a category reads as a clear step above the light service
- * sections beneath it.
+ * listed as an index that links down to each one. A coloured band (a step
+ * along the logo's blues: bright blue -> navy -> deep navy across the three
+ * categories) so a category reads as a clear step above the light service
+ * sections beneath it, and each category has its own colour.
  */
 function CategoryBand({ category }: { category: SolutionCategory }) {
   return (
-    <Section tone="ink" id={category.slug} className="py-20 md:py-28 lg:py-32">
-      <div className="shell">
+    <Section tone="ink" id={category.slug} className="relative overflow-hidden py-20 md:py-28 lg:py-32">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background: `linear-gradient(135deg, ${category.theme.from} 0%, ${category.theme.to} 100%)`,
+        }}
+      />
+      <div className="shell relative">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <Reveal y={14} amount={0.1}>
               <div className="mb-7 flex items-center gap-4">
-                <span className="h-px w-8 bg-corn" aria-hidden="true" />
-                <span className="kicker text-white/60">Category {category.number}</span>
+                <span className="h-px w-8 bg-white/60" aria-hidden="true" />
+                <span className="kicker text-white/75">Category {category.number}</span>
               </div>
             </Reveal>
 
@@ -225,29 +234,29 @@ function CategoryBand({ category }: { category: SolutionCategory }) {
             />
 
             <Reveal delay={0.14} amount={0.1} className="mt-8">
-              <p className="lede max-w-xl text-white/70">{category.intro}</p>
+              <p className="lede max-w-xl text-white/85">{category.intro}</p>
             </Reveal>
           </div>
 
           <div className="lg:col-span-5 lg:pt-3">
             <Reveal delay={0.2} amount={0.1}>
-              <ol className="border-b border-white/15">
+              <ol className="border-b border-white/25">
                 {category.items.map((item) => (
-                  <li key={item.slug} className="border-t border-white/15">
+                  <li key={item.slug} className="border-t border-white/25">
                     <a
                       href={`#${item.slug}`}
                       data-cursor="link"
                       className="group flex items-baseline gap-5 py-4"
                     >
-                      <span className="font-display text-[0.75rem] font-semibold tabular-nums tracking-[0.18em] text-corn">
+                      <span className="font-display text-[0.75rem] font-semibold tabular-nums tracking-[0.18em] text-white/70">
                         {item.number}
                       </span>
-                      <span className="flex-1 font-display text-[1.05rem] font-semibold leading-snug tracking-tightest text-white transition-colors duration-500 ease-brand group-hover:text-corn">
+                      <span className="flex-1 font-display text-[1.05rem] font-semibold leading-snug tracking-tightest text-white transition-colors duration-500 ease-brand group-hover:text-white/75">
                         {item.title}
                       </span>
                       <span
                         aria-hidden="true"
-                        className="font-display text-lg text-white/40 transition-[color,transform] duration-500 ease-brand group-hover:translate-y-0.5 group-hover:text-corn"
+                        className="font-display text-lg text-white/50 transition-[color,transform] duration-500 ease-brand group-hover:translate-y-0.5 group-hover:text-white"
                       >
                         &darr;
                       </span>

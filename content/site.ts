@@ -111,6 +111,8 @@ export type SolutionCategory = {
   slug: string;
   title: string;
   intro: string;
+  /** Per-category colour: a band gradient plus a solid accent. 01 is the logo blue; 02 and 03 are distinct hues. */
+  theme: { from: string; to: string; accent: string };
   items: readonly Solution[];
 };
 
@@ -121,6 +123,7 @@ export const solutionCategories: readonly SolutionCategory[] = [
     number: "01",
     slug: "growth-marketing",
     title: "Growth & Marketing",
+    theme: { from: "#1670F0", to: "#0B4FCC", accent: "#1677FF" },
     intro:
       "Cross-industry marketing capabilities that help businesses build visibility, reach audiences, generate demand, and grow.",
     items: [
@@ -154,6 +157,7 @@ export const solutionCategories: readonly SolutionCategory[] = [
     number: "02",
     slug: "industry-specializations",
     title: "Industry Specializations",
+    theme: { from: "#0E8A94", to: "#0A5963", accent: "#0E8A94" },
     intro:
       "Specialized marketing solutions designed around the unique audiences, buying journeys, and business challenges of specific industries.",
     items: [
@@ -187,6 +191,7 @@ export const solutionCategories: readonly SolutionCategory[] = [
     number: "03",
     slug: "creative-digital-solutions",
     title: "Creative & Digital Solutions",
+    theme: { from: "#6247DA", to: "#3B2A9A", accent: "#6247DA" },
     intro:
       "Production, digital platforms, and communication capabilities that help businesses express their value and deliver their marketing effectively.",
     items: [
@@ -233,6 +238,7 @@ export const solutionsTeaser = {
         number: category.number,
         title: category.title,
         intro: category.intro,
+        accent: category.theme.accent,
       },
     })),
   ),
@@ -316,6 +322,17 @@ export const whoWeAre = {
     "AI gives us the speed to do this without the old cost or timeline. It has never been an excuse to skip the thinking.",
   ],
   signature: "The Founding Team, Corn & Cheese Media",
+} as const;
+
+/**
+ * HOMEPAGE FOUNDERS NOTE — copy supplied directly by the client. Separate from
+ * the longer "A Note, Directly From Us" on the Who We Are page, which is the
+ * approved PDF copy and is unchanged.
+ */
+export const foundersNote = {
+  kicker: "Founders Note",
+  body: "We started Corn & Cheese Media to bridge the gap between knowing what a business needs and making it happen. By combining data, advertising, and technology under one roof, we help businesses turn sharper insights into stronger marketing and measurable growth.",
+  cta: { label: "Read The Full Note", href: "/who-we-are" },
 } as const;
 
 /* ------------------------------------------------------------------ */

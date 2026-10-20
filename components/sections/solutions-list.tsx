@@ -16,6 +16,8 @@ type Group = {
   number: string;
   title: string;
   intro: string;
+  /** The category's own colour, from the logo's blues. */
+  accent: string;
 };
 
 type Item = {
@@ -212,7 +214,12 @@ export function SolutionsList({
                   animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 22 }}
                   transition={{ duration: 0.7, ease: EASE, delay: i * 0.06 }}
                 >
-                  <p className="kicker">Category {item.group.number}</p>
+                  <span
+                    aria-hidden="true"
+                    className="mb-4 block h-[3px] w-10"
+                    style={{ background: item.group.accent }}
+                  />
+                  <p className="kicker !text-cheese">Category {item.group.number}</p>
                   <h3 className="mt-3 font-display text-[clamp(1.35rem,2.2vw,1.85rem)] font-semibold leading-tight tracking-tightest text-ink">
                     {item.group.title}
                   </h3>

@@ -28,13 +28,13 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} — We look at data before we look for ideas.`,
-    template: `%s — ${site.name}`,
+    default: `${site.name} | Data + Advertising`,
+    template: `%s | ${site.name}`,
   },
   description: hero.subheadline,
   icons: { icon: "/brand/mark.png", apple: "/brand/mark.png" },
   openGraph: {
-    title: site.name,
+    title: `${site.name} | Data + Advertising`,
     description: hero.subheadline,
     type: "website",
     locale: "en_IN",

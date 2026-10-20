@@ -248,7 +248,7 @@ export function Hero() {
                 on small screens (dimmed); beside it from md up. */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute bottom-0 right-0 h-[58%] w-[92%] opacity-40 md:top-[12%] md:h-auto md:w-[38vw] md:max-w-[760px] md:opacity-100"
+              className="pointer-events-none absolute right-0 top-1/2 h-[62%] w-full -translate-y-1/2 opacity-45 md:bottom-0 md:top-[12%] md:h-auto md:w-[38vw] md:max-w-[760px] md:translate-y-0 md:opacity-100"
             >
               <motion.div
                 className="relative h-full w-full"
